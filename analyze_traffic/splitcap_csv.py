@@ -28,15 +28,13 @@ def add_results(tmp_string, line, splitted_csv_dir, result_csv, HASH_LENTH, HASH
 	hash_letters = hash_object.hexdigest()[-1*HASH_LENTH:]
 	output_subdir = os.path.join(splitted_csv_dir, '/'.join(hash_letters[:HASH_DIR_LAYERS]))
 	output_path_csv = os.path.join(output_subdir, hash_letters[HASH_DIR_LAYERS:])
-	if 'tcp' in tmp_string:
-		print output_path_csv
 	
 	if not output_path_csv in result_csv:
 		result_csv[output_path_csv] = [line]
 	else:
 		result_csv[output_path_csv].append(line)
 
-def worker(sublist, splitted_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, out_q, thread_id):
+def worker(sublist, splitted_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, out_q, thread_id, write_lock):
 	num_of_files = len(sublist)
 
 	tmp_proto, tmp_src_port, tmp_dst_port = 0, 0, 0
@@ -74,11 +72,14 @@ def worker(sublist, splitted_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, out_q, thread
 				add_results(tmp_string, line, splitted_csv_dir, result_csv, HASH_LENTH, HASH_DIR_LAYERS)
 				
 		# write	results to splitted csv files
+		write_lock.get()
 		for outfile in result_csv:
 			with open(outfile, 'ab') as ff:
+				# only one process can write the same file at a time
 				writer = csv.writer(ff, delimiter = '\t', quoting = csv.QUOTE_NONE, escapechar = '\'')
 				writer.writerows(result_csv[outfile])
-				
+		write_lock.put(1)
+		
 		# print the progress
 		percentg = int(math.floor(count / float(num_of_files) * 100))
 		if percentg % 10 == 0:
@@ -86,7 +87,7 @@ def worker(sublist, splitted_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, out_q, thread
 			helpers.update_progress(percentg)
 	out_q.put(1)
 
-def main(splitted_csv_dir, db_csv_dir, HASH_LENTH, HASH_DIR_LAYERS):
+def main(splitted_csv_dir, db_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, numproc):
 	# preprocessing splitted_csv_dir & splitted_pcap_dir
 	preprocess_dirs(splitted_csv_dir, HASH_DIR_LAYERS)	
 
@@ -95,13 +96,16 @@ def main(splitted_csv_dir, db_csv_dir, HASH_LENTH, HASH_DIR_LAYERS):
 	files_lst = sorted(files_lst)
 
 	# parallelization starts here
-	numproc = 20
+	#numproc = 20
 	out_q = Queue()
+	# only one process can write at a time
+	write_lock = Queue()
+	write_lock.put(1)
 	chunksize = int(math.ceil(len(files_lst) / float(numproc)))
 	procs = []
 	for i in range(numproc):
 		sublist = files_lst[i*chunksize:(i+1)*chunksize]
-		p = Process(target = worker, args = (sublist, splitted_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, out_q, i))
+		p = Process(target = worker, args = (sublist, splitted_csv_dir, HASH_LENTH, HASH_DIR_LAYERS, out_q, i, write_lock))
 		procs.append(p)
 		p.start()
 
