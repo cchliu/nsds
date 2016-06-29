@@ -23,35 +23,33 @@ def main():
 		addLenthHashdb.main()		
 	"""
 	#settings.init('MuD/MuD2007-03-02-01')
-	settings.init('test_data')
+
+	settings.init('wifi')
+	"""
+	helpers.create_dir(settings.pcapTocsv_dir)
+	helpers.create_dir(settings.db_csv_dir)
+	helpers.create_dir(settings.splitted_csv_dir)
 
 	start_time = time.time()
-	run_pcapTocsv.main(settings.pcap_dir, settings.pcapTocsv_dir)
+	run_pcapTocsv.main(settings.pcap_dir, settings.pcapTocsv_dir, 10)
 	end_time = time.time()
 	print "Time elapsed for converting pcap to csv: ", end_time - start_time
 	
 	start_time = time.time()
-	buildcsv.main(settings.pcapTocsv_dir, settings.pcap_dir, settings.db_csv_dir)
+	buildcsv.main(settings.pcapTocsv_dir, settings.pcap_dir, settings.db_csv_dir, 10)
 	end_time = time.time()
 	print "Time elapsed for adding start_byte for csv: ", end_time - start_time
 
-	#helpers.create_recursive_dirs(settings.HASH_DIR_LAYERS, settings.splitted_csv_dir)
-
 	start_time = time.time()
-	splitcap_csv.main(settings.splitted_csv_dir, settings.db_csv_dir, settings.HASH_LENTH, settings.HASH_DIR_LAYERS)
+	splitcap_csv.main(settings.splitted_csv_dir, settings.db_csv_dir, settings.HASH_LENTH, settings.HASH_DIR_LAYERS, 10)
 	end_time = time.time()
 	print "Time elapsed for splitting traffic into smalle 5-tuple based pcaps: ", end_time - start_time	
-	
+	"""	
 	start_time = time.time()
-	reorder_csv.main(settings.splitted_csv_dir)
-	buildcsv.main(settings.splitted_csv_dir, settings.splitted_pcap_dir, settings.splitted_csv_dir)
+	reorder_csv.main(settings.splitted_csv_dir, 10)
+	#buildcsv.main(settings.splitted_csv_dir, settings.splitted_pcap_dir, settings.splitted_csv_dir, 10)
 	end_time = time.time()
 	print "Time elapsed for reordering splitted csv files: ", end_time - start_time
-	
-		
-	#splitcap.main()
-	#buildcsv.main(settings.splitted_pcapTocsv_dir, settings.splitted_pcap_dir, settings.splitted_db_csv_dir)
-	#addLenthHashdb.main()
 	
 		
 if __name__ == "__main__":
