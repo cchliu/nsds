@@ -17,7 +17,12 @@ def worker(sublist, out_q, thread_id):
 		with open(tmp_file, 'rb') as ff:
 			reader = csv.reader(ff, delimiter='\t', quoting = csv.QUOTE_NONE)
 			for line in reader:
-				time_epoch = float(line[2])
+				try:
+					time_epoch = float(line[2])
+				except ValueError:
+					print tmp_file
+					print line
+					
 				if not time_epoch in result:
 					result[time_epoch] = [line]
 				else:
@@ -31,7 +36,7 @@ def worker(sublist, out_q, thread_id):
 			writer = csv.writer(ff, delimiter = '\t', quoting = csv.QUOTE_NONE, escapechar = '\'')
 			for key in keysList:
 				writer.writerows(result[key])
-
+		
                 # print the progress
                 percentg = int(math.floor(count / float(num_of_files) * 100))
                 if percentg % 10 == 0:
@@ -39,14 +44,14 @@ def worker(sublist, out_q, thread_id):
                         helpers.update_progress(percentg)
         out_q.put(1)
 
-def main(working_dir):
+def main(working_dir, numprocs):
 	files_lst = []
 	for root, dirnames, filenames in os.walk(working_dir):
 		for filename in filenames:
 			files_lst.append(os.path.join(root,filename))
 	
 	# parallelisation starts here
-	numprocs = 20
+	#numprocs = 10
 	out_q = Queue()
 	chunksize = int(math.ceil(float(len(files_lst)) / float(numprocs)))
 	procs = []

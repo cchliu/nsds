@@ -59,7 +59,7 @@ def worker(sublist, indir, pcap_dir, outdir, out_q, thread_id):
 			helpers.update_progress(percentg)
 	out_q.put(1)
 
-def main(indir, pcap_dir, outdir):
+def main(indir, pcap_dir, outdir, numproc):
 	#files_lst = glob.glob('{0}/*.csv'.format(pcapTocsv_dir))
 	files_lst = []
 	for root, directories, filenames in os.walk(indir):
@@ -68,7 +68,7 @@ def main(indir, pcap_dir, outdir):
 	files_lst = sorted(files_lst)
 
 	# parallelization starts here
-	numproc = 20
+	#numproc = 20
 	out_q = Queue()
 	chunksize = int(math.ceil(len(files_lst) / float(numproc)))	
 	procs = []

@@ -29,7 +29,7 @@ def worker(sublist, cmd, pcapTocsv_dir, out_q, thread_id):
 			helpers.update_progress(percentg)			 
 	out_q.put(1)
 		
-def main(pcap_dir, pcapTocsv_dir):
+def main(pcap_dir, pcapTocsv_dir, numproc):
 	# no need to remove old files in pcapTocsv_dir because of 'wb' mode
 	files_lst = glob.glob('{0}/*'.format(pcap_dir))
 	files_lst = sorted(files_lst)
@@ -45,7 +45,7 @@ def main(pcap_dir, pcapTocsv_dir):
 				my_cmd.append(line[0])
 			
 	# parallelization starts here
-	numproc = 20
+	#numproc = 20
 	out_q = Queue()
 	chunksize = int(math.ceil(len(files_lst) / float(numproc)))
 	procs = []
