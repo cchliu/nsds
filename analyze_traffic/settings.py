@@ -1,6 +1,8 @@
 """ 
 	Define all global variables
 """
+import os
+
 def init(dirname):
 	### fields_convertedtocsv file
 	global fields_convertedtocsv_file
@@ -20,11 +22,17 @@ def init(dirname):
 	global pcap_dir, pcapTocsv_dir, db_csv_dir, splitted_pcap_dir, splitted_csv_dir, splitted_pcapTocsv_dir, splitted_db_csv_dir
 	global hashdb_csv_dir, hashdb_csv_added_dir, hashdb_csv_lenth_added_dir 
 	### defining directory parameters
-	pcap_dir = '/home/cchliu/work/SDS/input/{0}/pcap'.format(dirname)
-	pcapTocsv_dir = '/home/cchliu/work/SDS/input/{0}/pcapTocsv'.format(dirname)
-	db_csv_dir = '/home/cchliu/work/SDS/input/{0}/db_csv'.format(dirname)
-	splitted_csv_dir = '/home/cchliu/work/SDS/input/{0}/splitted_csv'.format(dirname)
-	splitted_pcap_dir = '/home/cchliu/work/SDS/input/{0}/splitted_pcap'.format(dirname)
+	base_dir = '/home/cchliu/SDS/input'
+	root_dir = os.path.join(base_dir, dirname)
+	
+	# where input pcap files store
+	pcap_dir = os.path.join(root_dir, 'pcap')
+	# where csvs converted from pcaps store
+	pcapTocsv_dir = os.path.join(root_dir, 'pcapTocsv')
+	# modifying csvs by adding pcap_file name, start-byte, pkt-size
+	db_csv_dir  = os.path.join(root_dir, 'db_csv')
+	# where flow based splitted csvs store
+	splitted_csv_dir = os.path.join(root_dir, 'splitted_csv')
 	"""
 	pcap_dir = '/home/chang/input/{0}/pcap'.format(dirname)			# where pcaps store
 	pcapTocsv_dir = '/mnt/ssd/chang/input/{0}/pcapTocsv'.format(dirname)	# where csvs converted from pcap store
