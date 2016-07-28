@@ -7,6 +7,10 @@ def update_progress(progress):
 	progress = int(progress)
 	print "\r[{0}] {1}%".format('#'*(progress/10), progress)
 
+def create_dir(indir):
+        if not os.path.exists(indir):
+                os.makedirs(indir)
+
 def create_recursive_dirs(num_layers, home_dir):
 	hexdigit_values = [str(k) for k in range(10)] + ['a', 'b', 'c', 'd', 'e', 'f']
 	index_layer = 0

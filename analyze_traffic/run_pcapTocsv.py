@@ -1,7 +1,6 @@
 """
 	Extract packet fields from pcap and store it in csv
 """
-
 import os
 import glob
 import csv
@@ -29,10 +28,10 @@ def worker(sublist, cmd, pcapTocsv_dir, out_q, thread_id):
 			helpers.update_progress(percentg)			 
 	out_q.put(1)
 		
-def main(pcap_dir, pcapTocsv_dir, numproc):
+def run_pcapTocsv(files_lst, pcapTocsv_dir, numproc):
 	# no need to remove old files in pcapTocsv_dir because of 'wb' mode
-	files_lst = glob.glob('{0}/*'.format(pcap_dir))
-	files_lst = sorted(files_lst)
+	#files_lst = glob.glob('{0}/*'.format(pcap_dir))
+	#files_lst = sorted(files_lst)
 
 	tmp_file = '' 
 	my_cmd = ['tshark', '-r', tmp_file, '-T', 'fields', '-E', 'separator=/t']
@@ -59,4 +58,4 @@ def main(pcap_dir, pcapTocsv_dir, numproc):
 		out_q.get()
 	
 if __name__ == "__main__":
-	main()	
+	pass	
