@@ -1,9 +1,19 @@
-""" Configure file path """
+""" 
+	Configure parameters here
+"""
 import os
 
 def init(year, timezone_offset):
+        ### hash parameters
+        global HASH_LENTH, HASH_DIR_LAYERS
+        HASH_DIR_LAYERS = 0
+        HASH_LENTH = 1
+
 	global traffic_year, tz_offset
-	
 	traffic_year = year
 	tz_offset = timezone_offset
 
+	# snort config path
+	global snort_config_path
+	snort_config_path = '/etc/snort/snort.conf'
+	

@@ -13,7 +13,7 @@ def getPriority(line):
 
 
 def getClassification(line):
-	pattern = r'\[Classification: ([^]]+)\]'
+	pattern = r'\[Classification\: ([^]]+)\]'
 	match = re.search(pattern, line)
 	if match != None:
 		classification = match.groups()[0]
@@ -41,18 +41,24 @@ def getMsg(line):
 			
 
 def getEpochTime(line):
-	pattern = r'(\d+)/(\d+)-(\d+):(\d+):(\d+)\.(\d+)'
+	pattern = r'(\d+)/(\d+)-([-,\d]+):([-,\d]+):([-,\d]+)\.(\d+)'
 	match = re.search(pattern, line)
 	if match != None:
 		month, day, hh, mm, ss, micross = [int(k) for k in match.groups()]
-		#timestr= line[match.start():match.end()]
-		#month, day, hh, mm, ss, micross = [int(k) for k in re.findall(r'\d+', timestr)]
-		date_time = datetime.datetime(int(settings.traffic_year), month, day, hh, mm, ss)
-		epoch = mktime(date_time.timetuple()) + micross* 1e-6
-		epoch = epoch + settings.tz_offset * 3600
-		return epoch		
-	return None
-
+		# only work for year 1969
+		if hh<0 or mm<0 or ss<0:
+			basetime = datetime.datetime(1970, 1, 1, 0, 0, 0)
+			basetime = mktime(basetime.timetuple())
+			minustime = hh*-1*3600 + mm*-1*60 + ss*-1
+			epoch = minustime * -1 + basetime + micross* 1e-6
+		# normal years
+		else:
+			date_time = datetime.datetime(int(settings.traffic_year), month, day, hh, mm, ss)
+			epoch = mktime(date_time.timetuple()) + micross * 1e-6
+		epoch = epoch + settings.tz_offset * 3600	
+		return epoch
+	return Nonw
+	
 
 def getIpPort(line):
 	### IPV4

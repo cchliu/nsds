@@ -1,0 +1,2545 @@
+Running in IDS mode
+
+        --== Initializing Snort ==--
+Initializing Output Plugins!
+Initializing Preprocessors!
+Initializing Plug-ins!
+Parsing Rules file "/etc/snort/snort.conf"
+PortVar 'HTTP_PORTS' defined :  [ 80:81 311 383 591 593 901 1220 1414 1741 1830 2301 2381 2809 3037 3128 3702 4343 4848 5250 6988 7000:7001 7144:7145 7510 7777 7779 8000 8008 8014 8028 8080 8085 8088 8090 8118 8123 8180:8181 8243 8280 8300 8800 8888 8899 9000 9060 9080 9090:9091 9443 9999 11371 34443:34444 41080 50002 55555 ]
+PortVar 'SHELLCODE_PORTS' defined :  [ 0:79 81:65535 ]
+PortVar 'ORACLE_PORTS' defined :  [ 1024:65535 ]
+PortVar 'SSH_PORTS' defined :  [ 22 ]
+PortVar 'FTP_PORTS' defined :  [ 21 2100 3535 ]
+PortVar 'SIP_PORTS' defined :  [ 5060:5061 5600 ]
+PortVar 'FILE_DATA_PORTS' defined :  [ 80:81 110 143 311 383 591 593 901 1220 1414 1741 1830 2301 2381 2809 3037 3128 3702 4343 4848 5250 6988 7000:7001 7144:7145 7510 7777 7779 8000 8008 8014 8028 8080 8085 8088 8090 8118 8123 8180:8181 8243 8280 8300 8800 8888 8899 9000 9060 9080 9090:9091 9443 9999 11371 34443:34444 41080 50002 55555 ]
+PortVar 'GTP_PORTS' defined :  [ 2123 2152 3386 ]
+Detection:
+   Search-Method = AC-Full-Q
+    Split Any/Any group = enabled
+    Search-Method-Optimizations = enabled
+    Maximum pattern length = 20
+Tagged Packet Limit: 256
+Loading dynamic engine /usr/local/lib/snort_dynamicengine/libsf_engine.so... done
+Loading all dynamic detection libs from /usr/local/lib/snort_dynamicrules...
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/pua-p2p.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-webapp.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-oracle.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/browser-ie.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-executable.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-mail.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/exploit-kit.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-java.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/indicator-shellcode.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/os-windows.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/policy-social.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/protocol-snmp.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/netbios.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-iis.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-pdf.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-other.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/malware-other.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-image.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/browser-other.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/protocol-dns.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-multimedia.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-office.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-flash.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/os-linux.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-mysql.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/protocol-other.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/server-apache.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/os-other.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/malware-cnc.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/protocol-voip.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/protocol-nntp.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/file-other.so... done
+  Loading dynamic detection library /usr/local/lib/snort_dynamicrules/protocol-tftp.so... done
+  Finished Loading all dynamic detection libs from /usr/local/lib/snort_dynamicrules
+Loading all dynamic preprocessor libs from /usr/local/lib/snort_dynamicpreprocessor/...
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_reputation_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_sip_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_pop_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_gtp_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_ftptelnet_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_ssh_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_smtp_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_dce2_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_imap_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_ssl_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_modbus_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_dns_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_sdf_preproc.so... done
+  Loading dynamic preprocessor library /usr/local/lib/snort_dynamicpreprocessor//libsf_dnp3_preproc.so... done
+  Finished Loading all dynamic preprocessor libs from /usr/local/lib/snort_dynamicpreprocessor/
+Log directory = /home/cchliu/SDS/log/panda
+WARNING: ip4 normalizations disabled because not inline.
+WARNING: tcp normalizations disabled because not inline.
+WARNING: icmp4 normalizations disabled because not inline.
+WARNING: ip6 normalizations disabled because not inline.
+WARNING: icmp6 normalizations disabled because not inline.
+Frag3 global config:
+    Max frags: 65536
+    Fragment memory cap: 4194304 bytes
+Frag3 engine config:
+    Bound Address: default
+    Target-based policy: WINDOWS
+    Fragment timeout: 180 seconds
+    Fragment min_ttl:   1
+    Fragment Anomalies: Alert
+    Overlap Limit:     10
+    Min fragment Length:     100
+      Max Expected Streams: 768
+Stream global config:
+    Track TCP sessions: ACTIVE
+    Max TCP sessions: 262144
+    TCP cache pruning timeout: 30 seconds
+    TCP cache nominal timeout: 3600 seconds
+    Memcap (for reassembly packet storage): 8388608
+    Track UDP sessions: ACTIVE
+    Max UDP sessions: 131072
+    UDP cache pruning timeout: 30 seconds
+    UDP cache nominal timeout: 180 seconds
+    Track ICMP sessions: INACTIVE
+    Track IP sessions: INACTIVE
+    Log info if session memory consumption exceeds 1048576
+    Send up to 2 active responses
+    Wait at least 5 seconds between responses
+    Protocol Aware Flushing: ACTIVE
+        Maximum Flush Point: 16000
+Stream TCP Policy config:
+    Bound Address: default
+    Reassembly Policy: WINDOWS
+    Timeout: 180 seconds
+    Limit on TCP Overlaps: 10
+    Maximum number of bytes to queue per session: 1048576
+    Maximum number of segs to queue per session: 2621
+    Options:
+        Require 3-Way Handshake: YES
+        3-Way Handshake Timeout: 180
+        Detect Anomalies: YES
+    Reassembly Ports:
+      21 client (Footprint) 
+      22 client (Footprint) 
+      23 client (Footprint) 
+      25 client (Footprint) 
+      42 client (Footprint) 
+      53 client (Footprint) 
+      79 client (Footprint) 
+      80 client (Footprint) server (Footprint)
+      81 client (Footprint) server (Footprint)
+      109 client (Footprint) 
+      110 client (Footprint) 
+      111 client (Footprint) 
+      113 client (Footprint) 
+      119 client (Footprint) 
+      135 client (Footprint) 
+      136 client (Footprint) 
+      137 client (Footprint) 
+      139 client (Footprint) 
+      143 client (Footprint) 
+      161 client (Footprint) 
+      additional ports configured but not printed.
+Stream UDP Policy config:
+    Timeout: 180 seconds
+HttpInspect Config:
+    GLOBAL CONFIG
+      Detect Proxy Usage:       NO
+      IIS Unicode Map Filename: /etc/snort/unicode.map
+      IIS Unicode Map Codepage: 1252
+      Memcap used for logging URI and Hostname: 150994944
+      Max Gzip Memory: 838860
+      Max Gzip Sessions: 1613
+      Gzip Compress Depth: 65535
+      Gzip Decompress Depth: 65535
+    DEFAULT SERVER CONFIG:
+      Server profile: All
+      Ports (PAF): 80 81 311 383 591 593 901 1220 1414 1741 1830 2301 2381 2809 3037 3128 3702 4343 4848 5250 6988 7000 7001 7144 7145 7510 7777 7779 8000 8008 8014 8028 8080 8085 8088 8090 8118 8123 8180 8181 8243 8280 8300 8800 8888 8899 9000 9060 9080 9090 9091 9443 9999 11371 34443 34444 41080 50002 55555 
+      Server Flow Depth: 0
+      Client Flow Depth: 0
+      Max Chunk Length: 500000
+      Small Chunk Length Evasion: chunk size <= 10, threshold >= 5 times
+      Max Header Field Length: 750
+      Max Number Header Fields: 100
+      Max Number of WhiteSpaces allowed with header folding: 200
+      Inspect Pipeline Requests: YES
+      URI Discovery Strict Mode: NO
+      Allow Proxy Usage: NO
+      Disable Alerting: NO
+      Oversize Dir Length: 500
+      Only inspect URI: NO
+      Normalize HTTP Headers: NO
+      Inspect HTTP Cookies: YES
+      Inspect HTTP Responses: YES
+      Extract Gzip from responses: YES
+      Decompress response files:   
+      Unlimited decompression of gzip data from responses: YES
+      Normalize Javascripts in HTTP Responses: YES
+      Max Number of WhiteSpaces allowed with Javascript Obfuscation in HTTP responses: 200
+      Normalize HTTP Cookies: NO
+      Enable XFF and True Client IP: NO
+      Log HTTP URI data: NO
+      Log HTTP Hostname data: NO
+      Extended ASCII code support in URI: NO
+      Ascii: YES alert: NO
+      Double Decoding: YES alert: NO
+      %U Encoding: YES alert: YES
+      Bare Byte: YES alert: NO
+      UTF 8: YES alert: NO
+      IIS Unicode: YES alert: NO
+      Multiple Slash: YES alert: NO
+      IIS Backslash: YES alert: NO
+      Directory Traversal: YES alert: NO
+      Web Root Traversal: YES alert: NO
+      Apache WhiteSpace: YES alert: NO
+      IIS Delimiter: YES alert: NO
+      IIS Unicode Map: GLOBAL IIS UNICODE MAP CONFIG
+      Non-RFC Compliant Characters: 0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 
+      Whitespace Characters: 0x09 0x0b 0x0c 0x0d 
+rpc_decode arguments:
+    Ports to decode RPC on: 111 32770 32771 32772 32773 32774 32775 32776 32777 32778 32779 
+    alert_fragments: INACTIVE
+    alert_large_fragments: INACTIVE
+    alert_incomplete: INACTIVE
+    alert_multiple_requests: INACTIVE
+FTPTelnet Config:
+    GLOBAL CONFIG
+      Inspection Type: stateful
+      Check for Encrypted Traffic: YES alert: NO
+      Continue to check encrypted data: YES
+    TELNET CONFIG:
+      Ports: 23 
+      Are You There Threshold: 20
+      Normalize: YES
+      Detect Anomalies: YES
+    FTP CONFIG:
+      FTP Server: default
+        Ports (PAF): 21 2100 3535 
+        Check for Telnet Cmds: YES alert: YES
+        Ignore Telnet Cmd Operations: YES alert: YES
+        Ignore open data channels: NO
+      FTP Client: default
+        Check for Bounce Attacks: YES alert: YES
+        Check for Telnet Cmds: YES alert: YES
+        Ignore Telnet Cmd Operations: YES alert: YES
+        Max Response Length: 256
+SMTP Config:
+    Ports: 25 465 587 691 
+    Inspection Type: Stateful
+    Normalize: ATRN AUTH BDAT DATA DEBUG EHLO EMAL ESAM ESND ESOM ETRN EVFY EXPN HELO HELP IDENT MAIL NOOP ONEX QUEU QUIT RCPT RSET SAML SEND STARTTLS SOML TICK TIME TURN TURNME VERB VRFY X-EXPS XADR XAUTH XCIR XEXCH50 XGEN XLICENSE X-LINK2STATE XQUE XSTA XTRN XUSR CHUNKING X-ADAT X-DRCP X-ERCP X-EXCH50 
+    Ignore Data: No
+    Ignore TLS Data: No
+    Ignore SMTP Alerts: No
+    Max Command Line Length: 512
+    Max auth Command Line Length: 1000
+    Max Specific Command Line Length: 
+       ATRN:255 AUTH:246 BDAT:255 DATA:246 DEBUG:255 
+       EHLO:500 EMAL:255 ESAM:255 ESND:255 ESOM:255 
+       ETRN:246 EVFY:255 EXPN:255 HELO:500 HELP:500 
+       IDENT:255 MAIL:260 NOOP:255 ONEX:246 QUEU:246 
+       QUIT:246 RCPT:300 RSET:246 SAML:246 SEND:246 
+       SIZE:255 STARTTLS:246 SOML:246 TICK:246 TIME:246 
+       TURN:246 TURNME:246 VERB:246 VRFY:255 X-EXPS:246 
+       XADR:246 XAUTH:246 XCIR:246 XEXCH50:246 XGEN:246 
+       XLICENSE:246 X-LINK2STATE:246 XQUE:246 XSTA:246 XTRN:246 
+       XUSR:246 
+    Max Header Line Length: 1000
+    Max Response Line Length: 512
+    X-Link2State Alert: Yes
+    Drop on X-Link2State Alert: No
+    Alert on commands: None
+    Alert on unknown commands: No
+    SMTP Memcap: 838860
+    MIME Max Mem: 838860
+    Base64 Decoding: Enabled
+    Base64 Decoding Depth: Unlimited
+    Quoted-Printable Decoding: Enabled
+    Quoted-Printable Decoding Depth: Unlimited
+    Unix-to-Unix Decoding: Enabled
+    Unix-to-Unix Decoding Depth: Unlimited
+    Non-Encoded MIME attachment Extraction: Enabled
+    Non-Encoded MIME attachment Extraction Depth: Unlimited
+    Log Attachment filename: Enabled
+    Log MAIL FROM Address: Enabled
+    Log RCPT TO Addresses: Enabled
+    Log Email Headers: Enabled
+    Email Hdrs Log Depth: 1464
+SSH config: 
+    Autodetection: ENABLED
+    Challenge-Response Overflow Alert: ENABLED
+    SSH1 CRC32 Alert: ENABLED
+    Server Version String Overflow Alert: ENABLED
+    Protocol Mismatch Alert: ENABLED
+    Bad Message Direction Alert: DISABLED
+    Bad Payload Size Alert: DISABLED
+    Unrecognized Version Alert: DISABLED
+    Max Encrypted Packets: 20  
+    Max Server Version String Length: 100  
+    MaxClientBytes: 19600 (Default) 
+    Ports:
+	22
+DCE/RPC 2 Preprocessor Configuration
+  Global Configuration
+    DCE/RPC Defragmentation: Enabled
+    Memcap: 102400 KB
+    Events: co 
+    SMB Fingerprint policy: Disabled
+  Server Default Configuration
+    Policy: WinXP
+    Detect ports (PAF)
+      SMB: 139 445 
+      TCP: 135 
+      UDP: 135 
+      RPC over HTTP server: 593 
+      RPC over HTTP proxy: None
+    Autodetect ports (PAF)
+      SMB: None
+      TCP: 1025-65535 
+      UDP: 1025-65535 
+      RPC over HTTP server: 1025-65535 
+      RPC over HTTP proxy: None
+    Invalid SMB shares: C$ D$ ADMIN$ 
+    Maximum SMB command chaining: 3 commands
+    SMB file inspection: Disabled
+DNS config: 
+    DNS Client rdata txt Overflow Alert: ACTIVE
+    Obsolete DNS RR Types Alert: INACTIVE
+    Experimental DNS RR Types Alert: INACTIVE
+    Ports: 53
+SSLPP config:
+    Encrypted packets: not inspected
+    Ports:
+      443      465      563      636      989
+      992      993      994      995     7801
+     7802     7900     7901     7902     7903
+     7904     7905     7906     7907     7908
+     7909     7910     7911     7912     7913
+     7914     7915     7916     7917     7918
+     7919     7920
+    Server side data is trusted
+    Maximum SSL Heartbeat length: 0
+Sensitive Data preprocessor config: 
+    Global Alert Threshold: 25
+    Masked Output: DISABLED
+SIP config: 
+    Max number of sessions: 40000  
+    Max number of dialogs in a session: 4 (Default) 
+    Status: ENABLED
+    Ignore media channel: DISABLED
+    Max URI length: 512  
+    Max Call ID length: 80  
+    Max Request name length: 20 (Default) 
+    Max From length: 256 (Default) 
+    Max To length: 256 (Default) 
+    Max Via length: 1024 (Default) 
+    Max Contact length: 512  
+    Max Content length: 2048  
+    Ports:
+	5060	5061	5600
+    Methods:
+	  invite cancel ack bye register options refer subscribe update join info message notify benotify do qauth sprack publish service unsubscribe prack
+IMAP Config:
+    Ports: 143 
+    IMAP Memcap: 838860
+    MIME Max Mem: 838860
+    Base64 Decoding: Enabled
+    Base64 Decoding Depth: Unlimited
+    Quoted-Printable Decoding: Enabled
+    Quoted-Printable Decoding Depth: Unlimited
+    Unix-to-Unix Decoding: Enabled
+    Unix-to-Unix Decoding Depth: Unlimited
+    Non-Encoded MIME attachment Extraction: Enabled
+    Non-Encoded MIME attachment Extraction Depth: Unlimited
+POP Config:
+    Ports: 110 
+    POP Memcap: 838860
+    MIME Max Mem: 838860
+    Base64 Decoding: Enabled
+    Base64 Decoding Depth: Unlimited
+    Quoted-Printable Decoding: Enabled
+    Quoted-Printable Decoding Depth: Unlimited
+    Unix-to-Unix Decoding: Enabled
+    Unix-to-Unix Decoding Depth: Unlimited
+    Non-Encoded MIME attachment Extraction: Enabled
+    Non-Encoded MIME attachment Extraction Depth: Unlimited
+Modbus config: 
+    Ports:
+	502
+DNP3 config: 
+    Memcap: 262144
+    Check Link-Layer CRCs: ENABLED
+    Ports:
+	20000
+Reputation config: 
+WARNING: Can't find any whitelist/blacklist entries. Reputation Preprocessor disabled.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+Initializing rule chains...
+WARNING: /etc/snort/rules/snort.rules(8779) GID 1 SID 17904 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9098) GID 1 SID 21255 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9099) GID 1 SID 21256 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9100) GID 1 SID 21257 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9111) GID 1 SID 21327 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9133) GID 1 SID 21475 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9425) GID 1 SID 24034 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9510) GID 1 SID 25119 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9596) GID 1 SID 25946 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9631) GID 1 SID 26265 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9633) GID 1 SID 26286 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9634) GID 1 SID 26287 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9652) GID 1 SID 26396 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9654) GID 1 SID 26399 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9656) GID 1 SID 26400 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9657) GID 1 SID 26401 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9658) GID 1 SID 26402 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9659) GID 1 SID 26403 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9660) GID 1 SID 26404 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9661) GID 1 SID 26405 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9662) GID 1 SID 26406 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9663) GID 1 SID 26407 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9664) GID 1 SID 26408 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9665) GID 1 SID 26409 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9686) GID 1 SID 26522 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9693) GID 1 SID 26554 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9694) GID 1 SID 26555 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9695) GID 1 SID 26556 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9696) GID 1 SID 26558 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9704) GID 1 SID 26577 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9707) GID 1 SID 26580 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9708) GID 1 SID 26581 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9709) GID 1 SID 26582 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9710) GID 1 SID 26583 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9712) GID 1 SID 26589 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9720) GID 1 SID 26654 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9742) GID 1 SID 26718 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9784) GID 1 SID 26781 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9785) GID 1 SID 26782 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9811) GID 1 SID 26913 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9812) GID 1 SID 26914 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9813) GID 1 SID 26915 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9814) GID 1 SID 26916 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9815) GID 1 SID 26917 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9816) GID 1 SID 26918 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9817) GID 1 SID 26919 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9819) GID 1 SID 26920 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9838) GID 1 SID 26971 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9852) GID 1 SID 27043 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9853) GID 1 SID 27044 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9875) GID 1 SID 27180 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9876) GID 1 SID 27181 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9890) GID 1 SID 27247 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9929) GID 1 SID 27534 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9930) GID 1 SID 27535 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9931) GID 1 SID 27537 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9947) GID 1 SID 27625 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9948) GID 1 SID 27626 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9949) GID 1 SID 27627 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9950) GID 1 SID 27628 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9955) GID 1 SID 27632 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9968) GID 1 SID 27707 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(9986) GID 1 SID 27801 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10047) GID 1 SID 28034 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10048) GID 1 SID 28035 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10049) GID 1 SID 28036 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10082) GID 1 SID 28152 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10092) GID 1 SID 28193 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10109) GID 1 SID 28293 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10110) GID 1 SID 28294 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10111) GID 1 SID 28295 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10112) GID 1 SID 28296 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10113) GID 1 SID 28297 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10132) GID 1 SID 28404 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10144) GID 1 SID 28445 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10158) GID 1 SID 28539 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10160) GID 1 SID 28540 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10215) GID 1 SID 28852 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10216) GID 1 SID 28859 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10238) GID 1 SID 28952 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10239) GID 1 SID 28953 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10240) GID 1 SID 28959 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10247) GID 1 SID 28980 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10248) GID 1 SID 28981 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10262) GID 1 SID 29030 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10273) GID 1 SID 29126 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10281) GID 1 SID 29174 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10287) GID 1 SID 29217 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10296) GID 1 SID 29262 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10297) GID 1 SID 29263 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10316) GID 1 SID 29567 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10317) GID 1 SID 29568 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10322) GID 1 SID 29760 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10323) GID 1 SID 29761 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10324) GID 1 SID 29762 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10325) GID 1 SID 29763 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10326) GID 1 SID 29764 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10327) GID 1 SID 29765 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10328) GID 1 SID 29766 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10329) GID 1 SID 29767 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10330) GID 1 SID 29768 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10331) GID 1 SID 29769 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10332) GID 1 SID 29770 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10333) GID 1 SID 29771 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10334) GID 1 SID 29772 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10335) GID 1 SID 29773 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10336) GID 1 SID 29774 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10337) GID 1 SID 29775 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10338) GID 1 SID 29776 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10339) GID 1 SID 29777 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10340) GID 1 SID 29778 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10341) GID 1 SID 29779 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10342) GID 1 SID 29780 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10343) GID 1 SID 29781 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10344) GID 1 SID 29782 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10345) GID 1 SID 29783 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10346) GID 1 SID 29784 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10347) GID 1 SID 29785 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10348) GID 1 SID 29786 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10349) GID 1 SID 29787 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10356) GID 1 SID 29824 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10357) GID 1 SID 29825 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10358) GID 1 SID 29826 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10359) GID 1 SID 29827 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10364) GID 1 SID 29832 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10365) GID 1 SID 29833 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10366) GID 1 SID 29837 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10367) GID 1 SID 29838 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10368) GID 1 SID 29839 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10369) GID 1 SID 29840 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10370) GID 1 SID 29841 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10371) GID 1 SID 29842 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10372) GID 1 SID 29843 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10373) GID 1 SID 29844 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10374) GID 1 SID 29845 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10375) GID 1 SID 29846 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10376) GID 1 SID 29847 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10377) GID 1 SID 29848 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10378) GID 1 SID 29849 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10379) GID 1 SID 29850 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10380) GID 1 SID 29851 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10381) GID 1 SID 29852 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10382) GID 1 SID 29853 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10383) GID 1 SID 29854 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10384) GID 1 SID 29855 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10385) GID 1 SID 29856 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10386) GID 1 SID 29857 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10387) GID 1 SID 29858 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10393) GID 1 SID 29868 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10396) GID 1 SID 29875 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10399) GID 1 SID 29887 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10401) GID 1 SID 29894 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10413) GID 1 SID 30067 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10415) GID 1 SID 30069 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10481) GID 1 SID 30481 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10506) GID 1 SID 30543 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10507) GID 1 SID 30544 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10508) GID 1 SID 30545 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10509) GID 1 SID 30546 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10514) GID 1 SID 30550 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10543) GID 1 SID 30772 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10572) GID 1 SID 30918 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10576) GID 1 SID 30949 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10584) GID 1 SID 31034 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10585) GID 1 SID 31035 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10590) GID 1 SID 31090 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10604) GID 1 SID 31294 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10623) GID 1 SID 31423 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10634) GID 1 SID 31456 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10635) GID 1 SID 31457 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10638) GID 1 SID 31463 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10639) GID 1 SID 31464 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10645) GID 1 SID 31472 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10662) GID 1 SID 31600 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10668) GID 1 SID 31639 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10669) GID 1 SID 31640 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10683) GID 1 SID 31825 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10686) GID 1 SID 31829 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10690) GID 1 SID 31917 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10691) GID 1 SID 31918 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10692) GID 1 SID 31919 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10694) GID 1 SID 31920 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10695) GID 1 SID 31921 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10696) GID 1 SID 31922 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10717) GID 1 SID 31990 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10718) GID 1 SID 31991 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10740) GID 1 SID 32176 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10741) GID 1 SID 32177 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10742) GID 1 SID 32178 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10755) GID 1 SID 32309 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10765) GID 1 SID 32385 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10776) GID 1 SID 32645 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10778) GID 1 SID 32652 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10779) GID 1 SID 32653 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10780) GID 1 SID 32654 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10781) GID 1 SID 32655 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10782) GID 1 SID 32656 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10783) GID 1 SID 32657 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10784) GID 1 SID 32658 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10785) GID 1 SID 32659 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10786) GID 1 SID 32660 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10787) GID 1 SID 32661 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10788) GID 1 SID 32662 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10789) GID 1 SID 32663 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10790) GID 1 SID 32664 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10806) GID 1 SID 32845 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10807) GID 1 SID 32846 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10808) GID 1 SID 32847 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10809) GID 1 SID 32848 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10810) GID 1 SID 32849 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10811) GID 1 SID 32850 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10812) GID 1 SID 32851 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10851) GID 1 SID 33047 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10858) GID 1 SID 33207 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10879) GID 1 SID 33519 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10882) GID 1 SID 33522 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10886) GID 1 SID 33560 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10891) GID 1 SID 33649 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10946) GID 1 SID 34370 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10968) GID 1 SID 34843 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10969) GID 1 SID 34852 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10983) GID 1 SID 35068 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10992) GID 1 SID 35389 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10993) GID 1 SID 35390 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(10994) GID 1 SID 35391 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(11918) GID 1 SID 25948 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(11923) GID 1 SID 26020 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(11977) GID 1 SID 26526 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(11987) GID 1 SID 26562 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(11998) GID 1 SID 26834 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12007) GID 1 SID 26947 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12008) GID 1 SID 26948 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12009) GID 1 SID 26949 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12010) GID 1 SID 26950 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12011) GID 1 SID 26951 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12021) GID 1 SID 26985 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12024) GID 1 SID 27040 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12025) GID 1 SID 27041 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12026) GID 1 SID 27042 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12039) GID 1 SID 27085 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12040) GID 1 SID 27086 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12046) GID 1 SID 27113 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12051) GID 1 SID 27144 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12080) GID 1 SID 27865 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12081) GID 1 SID 27866 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12149) GID 1 SID 28428 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12150) GID 1 SID 28429 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12151) GID 1 SID 28430 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12153) GID 1 SID 28450 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12194) GID 1 SID 29167 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12215) GID 1 SID 29864 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12239) GID 1 SID 30920 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12294) GID 1 SID 31965 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12295) GID 1 SID 31966 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12296) GID 1 SID 31967 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12297) GID 1 SID 31970 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(12299) GID 1 SID 31972 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(15133) GID 1 SID 2419 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(15135) GID 1 SID 2420 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(15140) GID 1 SID 2422 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(15141) GID 1 SID 2423 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(15142) GID 1 SID 2435 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(17260) GID 1 SID 38580 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(17261) GID 1 SID 38581 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19050) GID 1 SID 28806 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19060) GID 1 SID 30997 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19061) GID 1 SID 30998 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19062) GID 1 SID 30999 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19063) GID 1 SID 31000 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19064) GID 1 SID 31001 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19073) GID 1 SID 31531 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19076) GID 1 SID 32646 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19077) GID 1 SID 32888 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19086) GID 1 SID 35745 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19094) GID 1 SID 38619 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19223) GID 1 SID 28345 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19224) GID 1 SID 28346 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19225) GID 1 SID 28420 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19226) GID 1 SID 28421 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19827) GID 1 SID 26655 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19830) GID 1 SID 26842 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19837) GID 1 SID 3063 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19838) GID 1 SID 3064 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19839) GID 1 SID 3081 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19840) GID 1 SID 3082 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19841) GID 1 SID 3083 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19842) GID 1 SID 30948 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19843) GID 1 SID 3155 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(19866) GID 1 SID 34500 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(20495) GID 1 SID 16368 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(20911) GID 1 SID 19964 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(20975) GID 1 SID 20080 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(20997) GID 1 SID 20221 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21203) GID 1 SID 21444 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21253) GID 1 SID 21562 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21272) GID 1 SID 21846 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21381) GID 1 SID 23492 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21439) GID 1 SID 24015 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21546) GID 1 SID 24885 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21547) GID 1 SID 24886 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21567) GID 1 SID 25050 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21568) GID 1 SID 25054 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21586) GID 1 SID 25224 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21597) GID 1 SID 25256 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21598) GID 1 SID 25257 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21599) GID 1 SID 25258 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21600) GID 1 SID 25259 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21602) GID 1 SID 25269 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21603) GID 1 SID 25271 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21608) GID 1 SID 25471 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21610) GID 1 SID 25503 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21611) GID 1 SID 25504 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21612) GID 1 SID 25511 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21628) GID 1 SID 25577 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21636) GID 1 SID 25627 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21639) GID 1 SID 25652 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21640) GID 1 SID 25660 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21654) GID 1 SID 25675 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21655) GID 1 SID 25765 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21656) GID 1 SID 25766 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21657) GID 1 SID 25807 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21658) GID 1 SID 25829 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21659) GID 1 SID 25854 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21664) GID 1 SID 25949 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21680) GID 1 SID 26023 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21681) GID 1 SID 26024 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21683) GID 1 SID 26075 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21687) GID 1 SID 26106 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21698) GID 1 SID 26203 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21700) GID 1 SID 26211 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21709) GID 1 SID 26264 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21718) GID 1 SID 26288 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21719) GID 1 SID 26289 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21720) GID 1 SID 26319 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21721) GID 1 SID 26325 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21722) GID 1 SID 26327 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21724) GID 1 SID 26335 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21725) GID 1 SID 26370 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21726) GID 1 SID 26371 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21727) GID 1 SID 26398 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21740) GID 1 SID 26467 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21741) GID 1 SID 26480 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21742) GID 1 SID 26482 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21743) GID 1 SID 26533 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21744) GID 1 SID 26560 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21745) GID 1 SID 26561 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21746) GID 1 SID 26563 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21747) GID 1 SID 26576 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21748) GID 1 SID 26578 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21749) GID 1 SID 26579 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21756) GID 1 SID 26613 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21757) GID 1 SID 26656 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21758) GID 1 SID 26657 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21769) GID 1 SID 26695 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21770) GID 1 SID 26696 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21771) GID 1 SID 26697 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21773) GID 1 SID 26712 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21774) GID 1 SID 26713 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21775) GID 1 SID 26714 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21776) GID 1 SID 26715 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21777) GID 1 SID 26719 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21778) GID 1 SID 26720 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21780) GID 1 SID 26722 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21781) GID 1 SID 26723 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21782) GID 1 SID 26725 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21783) GID 1 SID 26726 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21784) GID 1 SID 26727 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21785) GID 1 SID 26728 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21786) GID 1 SID 26729 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21787) GID 1 SID 26730 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21788) GID 1 SID 26731 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21789) GID 1 SID 26732 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21790) GID 1 SID 26733 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21791) GID 1 SID 26734 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21792) GID 1 SID 26735 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21793) GID 1 SID 26736 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21794) GID 1 SID 26737 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21795) GID 1 SID 26738 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21796) GID 1 SID 26739 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21797) GID 1 SID 26740 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21798) GID 1 SID 26741 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21799) GID 1 SID 26742 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21800) GID 1 SID 26743 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21801) GID 1 SID 26744 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21802) GID 1 SID 26745 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21803) GID 1 SID 26746 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21804) GID 1 SID 26747 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21805) GID 1 SID 26748 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21806) GID 1 SID 26749 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21807) GID 1 SID 26750 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21814) GID 1 SID 26774 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21815) GID 1 SID 26775 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21816) GID 1 SID 26776 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21818) GID 1 SID 26779 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21819) GID 1 SID 26780 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21825) GID 1 SID 26811 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21826) GID 1 SID 26812 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21835) GID 1 SID 26835 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21836) GID 1 SID 26836 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21837) GID 1 SID 26837 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21842) GID 1 SID 26911 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21843) GID 1 SID 26912 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21844) GID 1 SID 26923 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21845) GID 1 SID 26924 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21859) GID 1 SID 26965 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21860) GID 1 SID 26966 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21862) GID 1 SID 26968 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21863) GID 1 SID 26969 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21864) GID 1 SID 26970 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21865) GID 1 SID 26984 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21882) GID 1 SID 27017 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21887) GID 1 SID 27039 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21888) GID 1 SID 27045 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21902) GID 1 SID 27199 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21903) GID 1 SID 27200 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21904) GID 1 SID 27201 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21906) GID 1 SID 27248 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21907) GID 1 SID 27252 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21910) GID 1 SID 27256 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21911) GID 1 SID 27257 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21913) GID 1 SID 27533 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21920) GID 1 SID 27567 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21922) GID 1 SID 27596 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21923) GID 1 SID 27599 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21926) GID 1 SID 27629 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21927) GID 1 SID 27630 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21928) GID 1 SID 27631 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21929) GID 1 SID 27633 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21940) GID 1 SID 27648 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21941) GID 1 SID 27649 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21953) GID 1 SID 27680 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21958) GID 1 SID 27726 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21959) GID 1 SID 27727 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21960) GID 1 SID 27728 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21964) GID 1 SID 27774 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21965) GID 1 SID 27775 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21966) GID 1 SID 27802 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21967) GID 1 SID 27803 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21968) GID 1 SID 27804 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21969) GID 1 SID 27805 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21976) GID 1 SID 27918 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21977) GID 1 SID 27919 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21981) GID 1 SID 27964 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21982) GID 1 SID 27965 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21983) GID 1 SID 27966 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21985) GID 1 SID 27968 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21988) GID 1 SID 28005 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21989) GID 1 SID 28007 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21990) GID 1 SID 28008 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21991) GID 1 SID 28009 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21992) GID 1 SID 28010 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21993) GID 1 SID 28011 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21994) GID 1 SID 28012 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21995) GID 1 SID 28033 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21997) GID 1 SID 28042 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(21998) GID 1 SID 28044 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22004) GID 1 SID 28079 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22005) GID 1 SID 28080 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22011) GID 1 SID 28105 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22012) GID 1 SID 28106 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22013) GID 1 SID 28107 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22014) GID 1 SID 28114 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22015) GID 1 SID 28115 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22016) GID 1 SID 28116 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22017) GID 1 SID 28117 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22018) GID 1 SID 28118 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22019) GID 1 SID 28119 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22020) GID 1 SID 28120 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22021) GID 1 SID 28121 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22022) GID 1 SID 28122 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22023) GID 1 SID 28123 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22030) GID 1 SID 28147 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22031) GID 1 SID 28148 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22032) GID 1 SID 28153 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22033) GID 1 SID 28154 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22034) GID 1 SID 28155 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22037) GID 1 SID 28192 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22046) GID 1 SID 28242 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22051) GID 1 SID 28255 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22052) GID 1 SID 28285 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22053) GID 1 SID 28300 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22055) GID 1 SID 28323 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22062) GID 1 SID 28405 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22063) GID 1 SID 28406 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22073) GID 1 SID 28446 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22079) GID 1 SID 28493 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22082) GID 1 SID 28538 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22083) GID 1 SID 28541 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22084) GID 1 SID 28542 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22085) GID 1 SID 28543 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22089) GID 1 SID 28553 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22090) GID 1 SID 28554 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22105) GID 1 SID 28800 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22106) GID 1 SID 28802 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22107) GID 1 SID 28803 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22108) GID 1 SID 28804 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22109) GID 1 SID 28805 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22110) GID 1 SID 28807 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22112) GID 1 SID 28809 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22113) GID 1 SID 28810 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22115) GID 1 SID 28814 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22116) GID 1 SID 28815 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22129) GID 1 SID 28918 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22130) GID 1 SID 28919 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22131) GID 1 SID 28930 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22132) GID 1 SID 28940 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22137) GID 1 SID 28960 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22138) GID 1 SID 28976 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22139) GID 1 SID 28977 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22140) GID 1 SID 28982 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22141) GID 1 SID 28983 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22142) GID 1 SID 28984 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22143) GID 1 SID 28985 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22144) GID 1 SID 28986 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22145) GID 1 SID 28987 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22146) GID 1 SID 28988 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22156) GID 1 SID 29031 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22187) GID 1 SID 29127 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22203) GID 1 SID 29216 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22204) GID 1 SID 29220 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22205) GID 1 SID 29259 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22206) GID 1 SID 29260 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22207) GID 1 SID 29261 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22215) GID 1 SID 29300 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22236) GID 1 SID 29349 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22264) GID 1 SID 29459 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22286) GID 1 SID 29569 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22295) GID 1 SID 29664 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22296) GID 1 SID 29665 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22297) GID 1 SID 29666 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22300) GID 1 SID 29788 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22301) GID 1 SID 29789 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22302) GID 1 SID 29790 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22303) GID 1 SID 29791 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22304) GID 1 SID 29816 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22305) GID 1 SID 29817 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22306) GID 1 SID 29828 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22308) GID 1 SID 29862 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22309) GID 1 SID 29863 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22310) GID 1 SID 29865 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22311) GID 1 SID 29869 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22312) GID 1 SID 29870 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22319) GID 1 SID 29882 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22321) GID 1 SID 29884 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22324) GID 1 SID 29891 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22326) GID 1 SID 29895 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22327) GID 1 SID 29897 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22346) GID 1 SID 29981 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22364) GID 1 SID 30068 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22369) GID 1 SID 30087 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22372) GID 1 SID 30091 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22375) GID 1 SID 3010 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22376) GID 1 SID 3011 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22377) GID 1 SID 3012 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22378) GID 1 SID 3013 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22379) GID 1 SID 3014 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22380) GID 1 SID 3015 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22381) GID 1 SID 3016 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22384) GID 1 SID 30191 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22387) GID 1 SID 30196 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22388) GID 1 SID 30198 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22396) GID 1 SID 30234 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22400) GID 1 SID 30255 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22401) GID 1 SID 30256 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22402) GID 1 SID 30257 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22403) GID 1 SID 30258 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22404) GID 1 SID 30259 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22405) GID 1 SID 30262 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22413) GID 1 SID 30288 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22427) GID 1 SID 30482 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22428) GID 1 SID 30483 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22429) GID 1 SID 30484 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22433) GID 1 SID 30547 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22434) GID 1 SID 30548 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22435) GID 1 SID 30551 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22436) GID 1 SID 30552 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22439) GID 1 SID 30566 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22462) GID 1 SID 30914 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22463) GID 1 SID 30915 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22465) GID 1 SID 30919 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22495) GID 1 SID 31020 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22497) GID 1 SID 31036 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22499) GID 1 SID 31053 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22505) GID 1 SID 31070 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22512) GID 1 SID 31084 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22513) GID 1 SID 31112 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22514) GID 1 SID 31113 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22524) GID 1 SID 31136 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22536) GID 1 SID 31221 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22537) GID 1 SID 31222 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22548) GID 1 SID 31244 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22552) GID 1 SID 31260 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22554) GID 1 SID 31262 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22560) GID 1 SID 31293 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22561) GID 1 SID 31295 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22567) GID 1 SID 31315 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22581) GID 1 SID 31442 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22582) GID 1 SID 31449 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22583) GID 1 SID 31450 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22584) GID 1 SID 31452 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22585) GID 1 SID 31453 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22587) GID 1 SID 31458 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22589) GID 1 SID 31465 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22590) GID 1 SID 31466 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22591) GID 1 SID 31467 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22592) GID 1 SID 31468 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22593) GID 1 SID 31507 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22594) GID 1 SID 31530 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22604) GID 1 SID 31593 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22605) GID 1 SID 31603 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22606) GID 1 SID 31604 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22607) GID 1 SID 31605 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22608) GID 1 SID 31606 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22609) GID 1 SID 31607 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22611) GID 1 SID 31641 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22612) GID 1 SID 31642 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22613) GID 1 SID 31644 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22614) GID 1 SID 31649 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22617) GID 1 SID 31680 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22618) GID 1 SID 31681 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22619) GID 1 SID 31682 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22620) GID 1 SID 31683 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22647) GID 1 SID 31820 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22648) GID 1 SID 31824 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22649) GID 1 SID 31826 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22650) GID 1 SID 31827 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22669) GID 1 SID 31916 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22670) GID 1 SID 31923 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22671) GID 1 SID 31924 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22681) GID 1 SID 31964 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22682) GID 1 SID 31973 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22685) GID 1 SID 32009 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22686) GID 1 SID 32010 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22687) GID 1 SID 32011 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22710) GID 1 SID 32065 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22711) GID 1 SID 32066 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22712) GID 1 SID 32067 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22715) GID 1 SID 32072 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22716) GID 1 SID 32073 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22717) GID 1 SID 32074 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22728) GID 1 SID 32130 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22731) GID 1 SID 32179 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22732) GID 1 SID 32180 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22733) GID 1 SID 32181 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22736) GID 1 SID 32192 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22740) GID 1 SID 32196 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22747) GID 1 SID 32225 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22749) GID 1 SID 32250 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22776) GID 1 SID 32367 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22780) GID 1 SID 32374 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22811) GID 1 SID 32583 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22812) GID 1 SID 32584 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22818) GID 1 SID 32604 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22819) GID 1 SID 32605 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22820) GID 1 SID 32606 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22821) GID 1 SID 32607 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22822) GID 1 SID 32608 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22831) GID 1 SID 32665 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22832) GID 1 SID 32666 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22833) GID 1 SID 32667 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22834) GID 1 SID 32670 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22835) GID 1 SID 32674 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22848) GID 1 SID 32776 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22853) GID 1 SID 32823 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22854) GID 1 SID 32824 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22855) GID 1 SID 32825 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22856) GID 1 SID 32826 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22857) GID 1 SID 32827 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22858) GID 1 SID 32852 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22859) GID 1 SID 32853 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22869) GID 1 SID 32956 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22870) GID 1 SID 32957 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22871) GID 1 SID 32958 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22873) GID 1 SID 32976 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22874) GID 1 SID 32977 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22881) GID 1 SID 33058 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22882) GID 1 SID 33059 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22883) GID 1 SID 33060 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22894) GID 1 SID 33153 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22902) GID 1 SID 33219 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22903) GID 1 SID 33220 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22904) GID 1 SID 33221 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22905) GID 1 SID 33222 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22906) GID 1 SID 33223 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22907) GID 1 SID 33227 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22908) GID 1 SID 33228 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22909) GID 1 SID 33282 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22926) GID 1 SID 33443 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22927) GID 1 SID 33444 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22928) GID 1 SID 33449 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22929) GID 1 SID 33450 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22930) GID 1 SID 33453 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22932) GID 1 SID 33457 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22937) GID 1 SID 33520 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22938) GID 1 SID 33521 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22939) GID 1 SID 33523 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22940) GID 1 SID 33524 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22944) GID 1 SID 33547 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22949) GID 1 SID 33646 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22950) GID 1 SID 33647 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22951) GID 1 SID 33648 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22952) GID 1 SID 33650 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22957) GID 1 SID 33677 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22958) GID 1 SID 33678 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22978) GID 1 SID 33822 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22979) GID 1 SID 33851 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(22980) GID 1 SID 33852 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23001) GID 1 SID 33885 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23053) GID 1 SID 34047 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23066) GID 1 SID 34136 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23068) GID 1 SID 34140 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23081) GID 1 SID 34261 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23082) GID 1 SID 34262 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23083) GID 1 SID 34263 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23091) GID 1 SID 34292 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23094) GID 1 SID 34307 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23095) GID 1 SID 34308 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23096) GID 1 SID 34309 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23097) GID 1 SID 34310 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23098) GID 1 SID 34311 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23099) GID 1 SID 34312 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23100) GID 1 SID 34313 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23101) GID 1 SID 34314 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23102) GID 1 SID 34315 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23103) GID 1 SID 34316 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23104) GID 1 SID 34317 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23105) GID 1 SID 34318 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23120) GID 1 SID 34366 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23121) GID 1 SID 34367 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23122) GID 1 SID 34368 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23124) GID 1 SID 34452 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23125) GID 1 SID 34453 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23129) GID 1 SID 34461 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23130) GID 1 SID 34462 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23136) GID 1 SID 34501 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23153) GID 1 SID 34622 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23173) GID 1 SID 34868 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23183) GID 1 SID 34917 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23184) GID 1 SID 34931 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23189) GID 1 SID 34950 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23191) GID 1 SID 34958 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23192) GID 1 SID 34959 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23198) GID 1 SID 34994 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23199) GID 1 SID 34995 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23200) GID 1 SID 34996 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23201) GID 1 SID 34997 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23206) GID 1 SID 35030 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23222) GID 1 SID 35076 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23237) GID 1 SID 35312 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23242) GID 1 SID 35344 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23244) GID 1 SID 35353 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23247) GID 1 SID 35386 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23248) GID 1 SID 35387 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23249) GID 1 SID 35388 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23251) GID 1 SID 35394 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23262) GID 1 SID 35549 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23268) GID 1 SID 35733 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23269) GID 1 SID 35746 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23270) GID 1 SID 35749 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23271) GID 1 SID 35750 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23279) GID 1 SID 36064 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23280) GID 1 SID 36065 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23281) GID 1 SID 36066 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23284) GID 1 SID 36107 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23285) GID 1 SID 36108 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23293) GID 1 SID 36202 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23365) GID 1 SID 36914 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23372) GID 1 SID 37045 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23416) GID 1 SID 37467 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23418) GID 1 SID 37521 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23419) GID 1 SID 37522 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23420) GID 1 SID 37523 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23424) GID 1 SID 37552 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23428) GID 1 SID 37646 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23429) GID 1 SID 37647 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23434) GID 1 SID 37733 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23435) GID 1 SID 37816 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23437) GID 1 SID 37834 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23438) GID 1 SID 37835 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23448) GID 1 SID 38255 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23449) GID 1 SID 38256 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23450) GID 1 SID 38257 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23451) GID 1 SID 38258 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23455) GID 1 SID 38331 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23456) GID 1 SID 38333 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23458) GID 1 SID 38353 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23459) GID 1 SID 38354 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23462) GID 1 SID 38357 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23464) GID 1 SID 38359 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23466) GID 1 SID 38378 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23467) GID 1 SID 38379 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23468) GID 1 SID 38380 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23469) GID 1 SID 38385 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23470) GID 1 SID 38386 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23472) GID 1 SID 38388 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23473) GID 1 SID 38509 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23474) GID 1 SID 38510 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23475) GID 1 SID 38514 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23476) GID 1 SID 38515 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23477) GID 1 SID 38516 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23478) GID 1 SID 38517 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23482) GID 1 SID 38557 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23483) GID 1 SID 38558 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23484) GID 1 SID 38559 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23485) GID 1 SID 38560 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23486) GID 1 SID 38561 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23487) GID 1 SID 38562 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23488) GID 1 SID 38563 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23489) GID 1 SID 38564 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23490) GID 1 SID 38565 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23491) GID 1 SID 38566 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23495) GID 1 SID 38584 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23496) GID 1 SID 38585 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23497) GID 1 SID 38586 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23498) GID 1 SID 38587 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23499) GID 1 SID 38588 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23500) GID 1 SID 38603 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23501) GID 1 SID 38606 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23502) GID 1 SID 38607 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23503) GID 1 SID 38608 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23504) GID 1 SID 38610 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23506) GID 1 SID 38620 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23507) GID 1 SID 38621 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23524) GID 1 SID 38886 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23525) GID 1 SID 38887 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23526) GID 1 SID 38888 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23527) GID 1 SID 38890 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23528) GID 1 SID 38891 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23532) GID 1 SID 38950 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23540) GID 1 SID 39064 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23701) GID 1 SID 21845 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23702) GID 1 SID 21848 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23703) GID 1 SID 21849 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23704) GID 1 SID 21850 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23705) GID 1 SID 21851 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23707) GID 1 SID 22061 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23724) GID 1 SID 24017 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23737) GID 1 SID 24225 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23744) GID 1 SID 24265 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23816) GID 1 SID 25277 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23817) GID 1 SID 25578 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23818) GID 1 SID 25579 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23819) GID 1 SID 25580 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23822) GID 1 SID 26261 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23824) GID 1 SID 26380 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23825) GID 1 SID 26381 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23826) GID 1 SID 26382 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23830) GID 1 SID 26470 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23833) GID 1 SID 26660 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23836) GID 1 SID 26698 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23862) GID 1 SID 27246 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23867) GID 1 SID 27565 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23876) GID 1 SID 28006 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23898) GID 1 SID 30070 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23899) GID 1 SID 30071 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23900) GID 1 SID 30072 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23906) GID 1 SID 30567 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23907) GID 1 SID 30568 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23908) GID 1 SID 30569 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23917) GID 1 SID 32008 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(23918) GID 1 SID 32260 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24752) GID 1 SID 31975 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24753) GID 1 SID 31976 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24754) GID 1 SID 31977 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24755) GID 1 SID 31978 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24756) GID 1 SID 31985 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24757) GID 1 SID 32038 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24758) GID 1 SID 32039 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24759) GID 1 SID 32041 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24760) GID 1 SID 32042 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24761) GID 1 SID 32043 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(24766) GID 1 SID 32069 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(25771) GID 1 SID 31830 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(25772) GID 1 SID 31831 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(26628) GID 1 SID 28556 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(26629) GID 1 SID 28557 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(26640) GID 1 SID 37730 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(26641) GID 1 SID 37731 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28164) GID 1 SID 28324 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28179) GID 1 SID 30260 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28180) GID 1 SID 30261 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28201) GID 1 SID 33212 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28236) GID 1 SID 38951 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28237) GID 1 SID 38952 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28238) GID 1 SID 38953 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(28723) GID 1 SID 33452 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30703) GID 1 SID 30510 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30704) GID 1 SID 30511 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30705) GID 1 SID 30512 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30706) GID 1 SID 30513 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30707) GID 1 SID 30514 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30708) GID 1 SID 30515 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30709) GID 1 SID 30516 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30710) GID 1 SID 30517 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30711) GID 1 SID 30520 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30712) GID 1 SID 30521 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30713) GID 1 SID 30522 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30714) GID 1 SID 30523 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30715) GID 1 SID 30524 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30716) GID 1 SID 30525 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30717) GID 1 SID 30549 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30757) GID 1 SID 30777 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30758) GID 1 SID 30778 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30759) GID 1 SID 30779 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30760) GID 1 SID 30780 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30761) GID 1 SID 30781 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30762) GID 1 SID 30782 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30763) GID 1 SID 30783 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30764) GID 1 SID 30784 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30765) GID 1 SID 30785 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30766) GID 1 SID 30786 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30767) GID 1 SID 30787 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(30768) GID 1 SID 30788 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(32696) GID 1 SID 29829 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(32697) GID 1 SID 29830 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(32698) GID 1 SID 29831 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(33595) GID 1 SID 26925 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(33613) GID 1 SID 38993 in rule duplicates previous rule. Ignoring old rule.
+
+WARNING: /etc/snort/rules/snort.rules(33625) GID 1 SID 688 in rule duplicates previous rule. Ignoring old rule.
+
+12234 Snort rules read
+    11294 detection rules
+    0 decoder rules
+    21 preprocessor rules
+11315 Option Chains linked into 526 Chain Headers
+0 Dynamic rules
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++-------------------[Rule Port Counts]---------------------------------------
+|             tcp     udp    icmp      ip
+|     src    3434      46       0       0
+|     dst    6876    1316       0       0
+|     any     562      13       8       0
+|      nc     221      23       0       0
+|     s+d       8      13       0       0
++----------------------------------------------------------------------------
+
++-----------------------[detection-filter-config]------------------------------
+| memory-cap : 1048576 bytes
++-----------------------[detection-filter-rules]-------------------------------
+-------------------------------------------------------------------------------
+
++-----------------------[rate-filter-config]-----------------------------------
+| memory-cap : 1048576 bytes
++-----------------------[rate-filter-rules]------------------------------------
+| none
+-------------------------------------------------------------------------------
+
++-----------------------[event-filter-config]----------------------------------
+| memory-cap : 1048576 bytes
++-----------------------[event-filter-global]----------------------------------
++-----------------------[event-filter-local]-----------------------------------
+| none
++-----------------------[suppression]------------------------------------------
+| none
+-------------------------------------------------------------------------------
+Rule application order: activation->dynamic->pass->drop->sdrop->reject->alert->log
+Verifying Preprocessor Configurations!
+WARNING: flowbits key 'file.m4v' is set but not ever checked.
+WARNING: flowbits key 'file.fpx' is set but not ever checked.
+WARNING: flowbits key 'file.dmg' is set but not ever checked.
+WARNING: flowbits key 'kit.blackhole' is set but not ever checked.
+WARNING: flowbits key 'file.avi' is set but not ever checked.
+WARNING: flowbits key 'file.xul' is set but not ever checked.
+WARNING: flowbits key 'file.smi' is set but not ever checked.
+318 out of 1024 flowbits in use.
+
+[ Port Based Pattern Matching Memory ]
++- [ Aho-Corasick Summary ] -------------------------------------
+| Storage Format    : Full-Q 
+| Finite Automaton  : DFA
+| Alphabet Size     : 256 Chars
+| Sizeof State      : Variable (1,2,4 bytes)
+| Instances         : 469
+|     1 byte states : 450
+|     2 byte states : 19
+|     4 byte states : 0
+| Characters        : 285423
+| States            : 210861
+| Transitions       : 26511710
+| State Density     : 49.1%
+| Patterns          : 14577
+| Match States      : 15237
+| Memory (MB)       : 109.13
+|   Patterns        : 1.66
+|   Match Lists     : 3.71
+|   DFA
+|     1 byte states : 2.49
+|     2 byte states : 100.46
+|     4 byte states : 0.00
++----------------------------------------------------------------
+[ Number of patterns truncated to 20 bytes: 907 ]
+pcap DAQ configured to read-file.
+Acquiring network traffic from "/home/cchliu/SDS/input/panda/pcap/4bbb933c-9666-4ecc-b4e9-25ed2e45c220.pcap".
+Reload thread starting...
+Reload thread started, thread 0x7f19b3273700 (24366)
+WARNING: active responses disabled since DAQ can't inject packets.
+
+        --== Initialization Complete ==--
+
+   ,,_     -*> Snort! <*-
+  o"  )~   Version 2.9.8.3 GRE (Build 383) 
+   ''''    By Martin Roesch & The Snort Team: http://www.snort.org/contact#team
+           Copyright (C) 2014-2015 Cisco and/or its affiliates. All rights reserved.
+           Copyright (C) 1998-2013 Sourcefire, Inc., et al.
+           Using libpcap version 1.8.0-PRE-GIT_2016_05_18
+           Using PCRE version: 8.31 2012-07-06
+           Using ZLIB version: 1.2.8
+
+           Rules Engine: SF_SNORT_DETECTION_ENGINE  Version 2.6  <Build 1>
+           Rules Object: protocol-tftp  Version 1.0  <Build 1>
+           Rules Object: file-other  Version 1.0  <Build 1>
+           Rules Object: protocol-nntp  Version 1.0  <Build 1>
+           Rules Object: protocol-voip  Version 1.0  <Build 1>
+           Rules Object: malware-cnc  Version 1.0  <Build 1>
+           Rules Object: os-other  Version 1.0  <Build 1>
+           Rules Object: server-apache  Version 1.0  <Build 1>
+           Rules Object: protocol-other  Version 1.0  <Build 1>
+           Rules Object: server-mysql  Version 1.0  <Build 1>
+           Rules Object: os-linux  Version 1.0  <Build 1>
+           Rules Object: file-flash  Version 1.0  <Build 1>
+           Rules Object: file-office  Version 1.0  <Build 1>
+           Rules Object: file-multimedia  Version 1.0  <Build 1>
+           Rules Object: protocol-dns  Version 1.0  <Build 1>
+           Rules Object: browser-other  Version 1.0  <Build 1>
+           Rules Object: file-image  Version 1.0  <Build 1>
+           Rules Object: malware-other  Version 1.0  <Build 1>
+           Rules Object: server-other  Version 1.0  <Build 1>
+           Rules Object: file-pdf  Version 1.0  <Build 1>
+           Rules Object: server-iis  Version 1.0  <Build 1>
+           Rules Object: netbios  Version 1.0  <Build 1>
+           Rules Object: protocol-snmp  Version 1.0  <Build 1>
+           Rules Object: policy-social  Version 1.0  <Build 1>
+           Rules Object: os-windows  Version 1.0  <Build 1>
+           Rules Object: indicator-shellcode  Version 1.0  <Build 1>
+           Rules Object: file-java  Version 1.0  <Build 1>
+           Rules Object: exploit-kit  Version 1.0  <Build 1>
+           Rules Object: server-mail  Version 1.0  <Build 1>
+           Rules Object: file-executable  Version 1.0  <Build 1>
+           Rules Object: browser-ie  Version 1.0  <Build 1>
+           Rules Object: server-oracle  Version 1.0  <Build 1>
+           Rules Object: server-webapp  Version 1.0  <Build 1>
+           Rules Object: pua-p2p  Version 1.0  <Build 1>
+           Preprocessor Object: SF_DNP3  Version 1.1  <Build 1>
+           Preprocessor Object: SF_SDF  Version 1.1  <Build 1>
+           Preprocessor Object: SF_DNS  Version 1.1  <Build 4>
+           Preprocessor Object: SF_MODBUS  Version 1.1  <Build 1>
+           Preprocessor Object: SF_SSLPP  Version 1.1  <Build 4>
+           Preprocessor Object: SF_IMAP  Version 1.0  <Build 1>
+           Preprocessor Object: SF_DCERPC2  Version 1.0  <Build 3>
+           Preprocessor Object: SF_SMTP  Version 1.1  <Build 9>
+           Preprocessor Object: SF_SSH  Version 1.1  <Build 3>
+           Preprocessor Object: SF_FTPTELNET  Version 1.2  <Build 13>
+           Preprocessor Object: SF_GTP  Version 1.1  <Build 1>
+           Preprocessor Object: SF_POP  Version 1.0  <Build 1>
+           Preprocessor Object: SF_SIP  Version 1.1  <Build 1>
+           Preprocessor Object: SF_REPUTATION  Version 1.1  <Build 1>
+Commencing packet processing (pid=24363)
+===============================================================================
+Run time for packet processing was 1.350 seconds
+Snort processed 239 packets.
+Snort ran for 0 days 0 hours 0 minutes 1 seconds
+   Pkts/sec:          239
+===============================================================================
+Memory usage summary:
+  Total non-mmapped bytes (arena):       475660288
+  Bytes in mapped regions (hblkhd):      22986752
+  Total allocated space (uordblks):      190387216
+  Total free space (fordblks):           285273072
+  Topmost releasable block (keepcost):   77136
+===============================================================================
+Packet I/O Totals:
+   Received:          239
+   Analyzed:          239 (100.000%)
+    Dropped:            0 (  0.000%)
+   Filtered:            0 (  0.000%)
+Outstanding:            0 (  0.000%)
+   Injected:            0
+===============================================================================
+Breakdown by protocol (includes rebuilt packets):
+        Eth:          241 (100.000%)
+       VLAN:            0 (  0.000%)
+        IP4:          189 ( 78.423%)
+       Frag:            0 (  0.000%)
+       ICMP:            0 (  0.000%)
+        UDP:           75 ( 31.120%)
+        TCP:          108 ( 44.813%)
+        IP6:           42 ( 17.427%)
+    IP6 Ext:           48 ( 19.917%)
+   IP6 Opts:            6 (  2.490%)
+      Frag6:            0 (  0.000%)
+      ICMP6:            6 (  2.490%)
+       UDP6:           36 ( 14.938%)
+       TCP6:            0 (  0.000%)
+     Teredo:            0 (  0.000%)
+    ICMP-IP:            0 (  0.000%)
+    IP4/IP4:            0 (  0.000%)
+    IP4/IP6:            0 (  0.000%)
+    IP6/IP4:            0 (  0.000%)
+    IP6/IP6:            0 (  0.000%)
+        GRE:            0 (  0.000%)
+    GRE Eth:            0 (  0.000%)
+   GRE VLAN:            0 (  0.000%)
+    GRE IP4:            0 (  0.000%)
+    GRE IP6:            0 (  0.000%)
+GRE IP6 Ext:            0 (  0.000%)
+   GRE PPTP:            0 (  0.000%)
+    GRE ARP:            0 (  0.000%)
+    GRE IPX:            0 (  0.000%)
+   GRE Loop:            0 (  0.000%)
+       MPLS:            0 (  0.000%)
+        ARP:           10 (  4.149%)
+        IPX:            0 (  0.000%)
+   Eth Loop:            0 (  0.000%)
+   Eth Disc:            0 (  0.000%)
+   IP4 Disc:            0 (  0.000%)
+   IP6 Disc:            0 (  0.000%)
+   TCP Disc:            0 (  0.000%)
+   UDP Disc:            0 (  0.000%)
+  ICMP Disc:            0 (  0.000%)
+All Discard:            0 (  0.000%)
+      Other:            6 (  2.490%)
+Bad Chk Sum:            0 (  0.000%)
+    Bad TTL:            0 (  0.000%)
+     S5 G 1:            2 (  0.830%)
+     S5 G 2:            0 (  0.000%)
+      Total:          241
+===============================================================================
+Action Stats:
+     Alerts:            0 (  0.000%)
+     Logged:            0 (  0.000%)
+     Passed:            0 (  0.000%)
+Limits:
+      Match:            0
+      Queue:            0
+        Log:            0
+      Event:            0
+      Alert:            0
+Verdicts:
+      Allow:          239 (100.000%)
+      Block:            0 (  0.000%)
+    Replace:            0 (  0.000%)
+  Whitelist:            0 (  0.000%)
+  Blacklist:            0 (  0.000%)
+     Ignore:            0 (  0.000%)
+      Retry:            0 (  0.000%)
+===============================================================================
+Frag3 statistics:
+        Total Fragments: 0
+      Frags Reassembled: 0
+               Discards: 0
+          Memory Faults: 0
+               Timeouts: 0
+               Overlaps: 0
+              Anomalies: 0
+                 Alerts: 0
+                  Drops: 0
+     FragTrackers Added: 0
+    FragTrackers Dumped: 0
+FragTrackers Auto Freed: 0
+    Frag Nodes Inserted: 0
+     Frag Nodes Deleted: 0
+===============================================================================
+===============================================================================
+Stream statistics:
+            Total sessions: 40
+              TCP sessions: 6
+              UDP sessions: 34
+             ICMP sessions: 0
+               IP sessions: 0
+                TCP Prunes: 0
+                UDP Prunes: 0
+               ICMP Prunes: 0
+                 IP Prunes: 0
+TCP StreamTrackers Created: 6
+TCP StreamTrackers Deleted: 6
+              TCP Timeouts: 0
+              TCP Overlaps: 0
+       TCP Segments Queued: 48
+     TCP Segments Released: 48
+       TCP Rebuilt Packets: 20
+         TCP Segments Used: 47
+              TCP Discards: 1
+                  TCP Gaps: 1
+      UDP Sessions Created: 36
+      UDP Sessions Deleted: 36
+              UDP Timeouts: 2
+              UDP Discards: 0
+                    Events: 1
+           Internal Events: 0
+           TCP Port Filter
+                  Filtered: 0
+                 Inspected: 0
+                   Tracked: 106
+           UDP Port Filter
+                  Filtered: 0
+                 Inspected: 0
+                   Tracked: 34
+===============================================================================
+HTTP Inspect - encodings (Note: stream-reassembled packets included):
+    POST methods:                         0         
+    GET methods:                          5         
+    HTTP Request Headers extracted:       5         
+    HTTP Request Cookies extracted:       0         
+    Post parameters extracted:            0         
+    HTTP response Headers extracted:      5         
+    HTTP Response Cookies extracted:      0         
+    Unicode:                              0         
+    Double unicode:                       0         
+    Non-ASCII representable:              0         
+    Directory traversals:                 0         
+    Extra slashes ("//"):                 0         
+    Self-referencing paths ("./"):        0         
+    HTTP Response Gzip packets extracted: 0         
+    Gzip Compressed Data Processed:       n/a       
+    Gzip Decompressed Data Processed:     n/a       
+    Total packets processed:              47        
+===============================================================================
+SMTP Preprocessor Statistics
+  Total sessions                                    : 0
+  Max concurrent sessions                           : 0
+===============================================================================
+dcerpc2 Preprocessor Statistics
+  Total sessions: 0
+===============================================================================
+SSL Preprocessor:
+   SSL packets decoded: 21        
+          Client Hello: 4         
+          Server Hello: 4         
+           Certificate: 4         
+           Server Done: 10        
+   Client Key Exchange: 4         
+   Server Key Exchange: 2         
+         Change Cipher: 8         
+              Finished: 0         
+    Client Application: 0         
+    Server Application: 0         
+                 Alert: 1         
+  Unrecognized records: 7         
+  Completed handshakes: 0         
+        Bad handshakes: 0         
+      Sessions ignored: 0         
+    Detection disabled: 1         
+===============================================================================
+SIP Preprocessor Statistics
+  Total sessions: 0
+===============================================================================
+Reputation Preprocessor Statistics
+  Total Memory Allocated: 0
+===============================================================================
+Snort exiting
