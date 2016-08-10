@@ -1,0 +1,9 @@
+Number of alerts triggered:  5050
+Number of unique 5-tuples (micro flow_id, direction, sid):  3654
+Number of distinct SIDs triggered:  53
+Number of TCP alerts triggered:  1770
+Number of unique 5-tuples (micro flow_id, direction, sid) triggering TCP alerts:  1145
+Number of distinct SIDs triggered in TCP alerts:  44
+Number of UDP alerts triggered:  3280
+Number of unique 5-tuples (micro flow_id, direction, sid) triggering UDP alerts:  2509
+Number of distinct SIDs triggered in UDP alerts:  9
