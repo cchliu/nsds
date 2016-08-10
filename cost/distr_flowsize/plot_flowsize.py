@@ -12,7 +12,7 @@ def main():
 			if tmp_proto == 'tcp':
 				nums.append(tmp_num)
 
-        xscales = [10**k for k in np.arange(0,5,0.1)]
+        xscales = [i for i in range(1,10)] + [10**k for k in np.arange(1,5,0.1)]
 	xtitle = 'Flow size (#packets)'
 	ytitle = 'CDF'
         cdf_plot(nums, xscales, xtitle, ytitle, 'flow_size_cdf.png')
