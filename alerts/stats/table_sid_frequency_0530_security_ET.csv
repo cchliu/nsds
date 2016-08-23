@@ -1,0 +1,282 @@
+2012648	8661	2745	1	Potential Corporate Privacy Violation	ET POLICY Dropbox Client Broadcasting
+2013031	1878	1878	2	Attempted Information Leak	ET POLICY Python-urllib/ Suspicious User Agent
+28069	2069	1653	1	A Network Trojan was detected	APP-DETECT DNS request for potential malware SafeGuard to domain 360.cn
+2002334	1619	1608	1	Potential Corporate Privacy Violation	ET CHAT Google IM traffic Jabber client sign-on
+2019416	1456	1456	1	Potential Corporate Privacy Violation	ET POLICY SSLv3 outbound connection from client vulnerable to POODLE attack
+2020565	1328	1271	1	Potential Corporate Privacy Violation	ET POLICY Dropbox DNS Lookup - Possible Offsite File Backup in Use
+2009702	1115	1100	1	Potential Corporate Privacy Violation	ET POLICY DNS Update From External net
+2012647	923	923	1	Potential Corporate Privacy Violation	ET POLICY Dropbox.com Offsite File Backup in Use
+2002157	777	757	1	Potential Corporate Privacy Violation	ET CHAT Skype User-Agent detected
+2003492	722	719	1	A Network Trojan was detected	ET MALWARE Suspicious Mozilla User-Agent - Likely Fake (Mozilla/4.0)
+2014920	638	637	1	Potential Corporate Privacy Violation	ET POLICY Microsoft Online Storage Client Hello TLSv1 Possible SkyDrive (2)
+2014919	638	637	1	Potential Corporate Privacy Violation	ET POLICY Microsoft Online Storage Client Hello TLSv1 Possible SkyDrive (1)
+24111	509	506	1	A Network Trojan was detected	BLACKLIST User-Agent known malicious user agent - Post
+2018358	1093	455	2	Potentially Bad Traffic	ET INFO GENERIC SUSPICIOUS POST to Dotted Quad with Fake Browser 1
+28070	740	386	1	A Network Trojan was detected	APP-DETECT DNS request for potential malware SafeGuard to domain 360safe.com
+2010935	380	380	2	Potentially Bad Traffic	ET POLICY Suspicious inbound to MSSQL port 1433
+2014095	374	264	1	Potential Corporate Privacy Violation	ET POLICY Kindle Fire Browser User-Agent Outbound
+30832	232	232	1	A Network Trojan was detected	BLACKLIST DNS request for known malware domain luckyleap.net - Win.Trojan.Mudrop
+28556	224	224	2	Attempted Denial of Service	PROTOCOL-DNS DNS query amplification attempt
+3	208	208	1	Attempted User Privilege Gain	(smtp) Attempted response buffer overflow: 547 chars
+2002878	189	188	1	Potential Corporate Privacy Violation	ET POLICY iTunes User Agent
+2001219	167	167	2	Attempted Information Leak	ET SCAN Potential SSH Scan
+2003068	160	160	2	Attempted Information Leak	ET SCAN Potential SSH Scan OUTBOUND
+2013290	156	154	2	Attempted Information Leak	ET POLICY MOBILE Apple device leaking UDID from SpringBoard via GET
+2002327	153	152	1	Potential Corporate Privacy Violation	ET CHAT Google Talk (Jabber) Client Login
+2014726	142	142	1	Potential Corporate Privacy Violation	ET POLICY Outdated Windows Flash Version IE
+2012758	135	134	3	Misc activity	ET INFO DYNAMIC_DNS Query to *.dyndns. Domain
+2012247	130	129	1	Potential Corporate Privacy Violation	ET P2P BTWebClient UA uTorrent in use
+2013504	1359	117	3	Not Suspicious Traffic	ET POLICY GNU/Linux APT User-Agent Outbound likely related to package management
+16301	109	106	1	Attempted User Privilege Gain	BROWSER-IE Microsoft Internet Explorer HTML DOM invalid DHTML textnode creation attempt
+2014997	92	92	1	Potential Corporate Privacy Violation	ET POLICY Pandora Usage
+2014932	89	89	2	Potentially Bad Traffic	ET POLICY DynDNS CheckIp External IP Address Server Response
+2000334	86	86	1	Potential Corporate Privacy Violation	ET P2P BitTorrent peer sync
+2013028	82	82	2	Attempted Information Leak	ET POLICY curl User-Agent Outbound
+2015561	468	81	2	Potentially Bad Traffic	ET INFO PDF Using CCITTFax Filter
+2014703	80	80	1	Potential Corporate Privacy Violation	ET DNS Non-DNS or Non-Compliant DNS traffic on DNS port Reserved Bit Set
+2020881	79	79	1	A Network Trojan was detected	ET MALWARE PUP Win32/AdWare.Sendori User-Agent
+2000419	130	78	1	Potential Corporate Privacy Violation	ET POLICY PE EXE or DLL Windows file download
+2018904	77	77	3	Generic Protocol Command Decode	ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag false change port flag false)
+2020716	80	76	1	Potential Corporate Privacy Violation	ET POLICY Possible External IP Lookup ipinfo.io
+32847	120	68	3	Misc activity	APP-DETECT Absolute Software Computrace outbound connection - bh.namequery.com
+2011582	71	67	2	Potentially Bad Traffic	ET POLICY Vulnerable Java Version 1.6.x Detected
+2014799	60	60	1	Potential Corporate Privacy Violation	ET POLICY OpenVPN Update Check
+2002330	59	59	1	Potential Corporate Privacy Violation	ET POLICY Google Talk TLS Client Traffic
+2008500	53	49	1	A Network Trojan was detected	ET MALWARE Sogoul.com Spyware User-Agent (SogouIMEMiniSetup)
+2022913	130	49	3	Generic Protocol Command Decode	ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel
+2016870	48	45	1	Potential Corporate Privacy Violation	ET POLICY Unsupported/Fake Internet Explorer Version MSIE 5.
+2010144	145	44	1	Potential Corporate Privacy Violation	ET P2P Vuze BT UDP Connection (5)
+2010066	51	44	1	A Network Trojan was detected	ET POLICY Data POST to an image file (gif)
+2010143	44	43	1	Potential Corporate Privacy Violation	ET P2P Vuze BT UDP Connection (4)
+2018908	44	42	3	Generic Protocol Command Decode	ET INFO Session Traversal Utilities for NAT (STUN Binding Response)
+2018899	52	42	1	A Network Trojan was detected	ET MALWARE Win32/BrowseFox.H Checkin 2
+2011719	51	39	1	A Network Trojan was detected	ET POLICY Win32/Sogou User-Agent (SOGOU_UPDATER)
+2012811	43	39	2	Potentially Bad Traffic	ET DNS Query to a .tk domain - Likely Hostile
+2001972	38	38	3	Detection of a Network Scan	ET SCAN Behavioral Unusually fast Terminal Server Traffic, Potential Scan or Infection (Inbound)
+2013926	39	37	2	Potentially Bad Traffic	ET POLICY HTTP traffic on port 443 (POST)
+2008581	37	37	1	Potential Corporate Privacy Violation	ET P2P BitTorrent DHT ping request
+2002911	36	36	2	Attempted Information Leak	ET SCAN Potential VNC Scan 5900-5920
+2016150	202	34	1	Attempted User Privilege Gain	ET INFO Session Traversal Utilities for NAT (STUN Binding Response)
+2013479	33	33	3	Misc activity	ET SCAN Behavioral Unusually fast Terminal Server Traffic, Potential Scan or Infection (Outbound)
+2000345	35	33	1	A Network Trojan was detected	ET TROJAN IRC Nick change on non-standard port
+2011706	32	32	1	Potential Corporate Privacy Violation	ET P2P Bittorrent P2P Client User-Agent (uTorrent)
+2016149	201	32	1	Attempted User Privilege Gain	ET INFO Session Traversal Utilities for NAT (STUN Binding Request)
+30260	31	31	1	A Network Trojan was detected	PUA-ADWARE Lucky Leap Adware outbound connection
+30261	30	30	1	A Network Trojan was detected	PUA-ADWARE Lucky Leap Adware outbound connection
+2015878	29	29	1	Potential Corporate Privacy Violation	ET POLICY Maxmind geoip check to /app/geoip.js
+2013222	28	28	1	Executable code was detected	ET SHELLCODE Excessive Use of HeapLib Objects Likely Malicious Heap Spray Attempt
+2018905	28	28	3	Generic Protocol Command Decode	ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag false change port flag true)
+2007994	29	26	1	A Network Trojan was detected	ET MALWARE Suspicious User-Agent (1 space)
+2012870	28	26	1	Potential Corporate Privacy Violation	ET POLICY HTTP Outbound Request contains pw
+2017015	26	26	1	Potential Corporate Privacy Violation	ET POLICY DropBox User Content Access over SSL
+2018906	25	25	3	Generic Protocol Command Decode	ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag true change port flag false)
+2013289	34	25	2	Attempted Information Leak	ET POLICY MOBILE Apple device leaking UDID from SpringBoard
+2001595	25	25	1	Potential Corporate Privacy Violation	ET CHAT Skype VOIP Checking Version (Startup)
+2013715	36	24	1	Potential Corporate Privacy Violation	ET POLICY BingBar ToolBar User-Agent (BingBar)
+31977	23	22	1	Attempted Administrator Privilege Gain	OS-OTHER Bash CGI environment variable injection attempt
+2022813	22	20	1	A Network Trojan was detected	ET MALWARE SearchProtect PUA User-Agent Observed
+2006380	20	20	1	Potential Corporate Privacy Violation	ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+2010645	51	20	1	A Network Trojan was detected	ET POLICY User-Agent (Launcher)
+2019415	19	19	1	Potential Corporate Privacy Violation	ET POLICY SSLv3 inbound connection to server vulnerable to POODLE attack
+2001891	61	17	1	A Network Trojan was detected	ET USER_AGENTS Suspicious User Agent (agent)
+17904	36	17	1	A Network Trojan was detected	BLACKLIST URI request for known malicious URI - /tongji.js
+2016871	16	16	1	Potential Corporate Privacy Violation	ET POLICY Unsupported/Fake Internet Explorer Version MSIE 4.
+2000348	17	16	1	A Network Trojan was detected	ET TROJAN IRC Channel JOIN on non-standard port
+38541	15	15	2	Detection of a non-standard protocol or event	INDICATOR-OBFUSCATION newline only separator evasion
+2019102	15	15	2	Attempted Denial of Service	ET DOS Possible SSDP Amplification Scan in Progress
+2009099	15	15	1	Potential Corporate Privacy Violation	ET P2P ThunderNetwork UDP Traffic
+2012692	33	14	1	A Network Trojan was detected	ET POLICY Microsoft user-agent automated process response to automated request
+2010140	46	14	1	Potential Corporate Privacy Violation	ET P2P Vuze BT UDP Connection
+34061	116	14	2	Attempted Denial of Service	SERVER-IIS Microsoft IIS Range header integer overflow attempt
+2012252	14	13	1	Executable code was detected	ET SHELLCODE Common 0a0a0a0a Heap Spray String
+2012935	24	13	1	Potential Corporate Privacy Violation	ET POLICY Google Music Streaming
+2012810	13	13	2	Potentially Bad Traffic	ET POLICY HTTP Request to a *.tk domain
+2012089	13	13	1	Executable code was detected	ET SHELLCODE Possible Call with No Offset UDP Shellcode
+2022814	14	12	1	A Network Trojan was detected	ET MALWARE Conduit Trovi Adware/PUA
+2007695	16	12	1	Potential Corporate Privacy Violation	ET POLICY Windows 98 User-Agent Detected - Possible Malware or Non-Updated System
+2009785	12	12	1	A Network Trojan was detected	ET MALWARE QVOD Related Spyware/Malware User-Agent (Qvod)
+2010819	12	12	1	Potential Corporate Privacy Violation	ET CHAT Facebook Chat using XMPP
+2012086	13	12	1	Executable code was detected	ET SHELLCODE Possible Call with No Offset TCP Shellcode
+2012087	24	12	1	Executable code was detected	ET SHELLCODE Possible Call with No Offset UDP Shellcode
+33553	11	11	1	A Network Trojan was detected	PUA-ADWARE Win.Adware.iBryte variant outbound connection
+25459	141	11	3	Misc activity	FILE-PDF Adobe Acrobat Reader incomplete JP2K image geometry potentially malicious PDF detected
+2021021	11	11	1	A Network Trojan was detected	ET TROJAN Kaspersky Sinkhole DNS Reply
+2011507	15	11	2	Potentially Bad Traffic	ET POLICY PDF With Embedded File
+2013743	11	11	2	Potentially Bad Traffic	ET INFO DYNAMIC_DNS Query to a Suspicious no-ip Domain
+2402000	11	11	2	Misc Attack	ET DROP Dshield Block Listed Source group 1
+2012078	11	11	1	Potential Corporate Privacy Violation	ET POLICY Windows-Based OpenSSL Tunnel Outbound
+2012888	13	11	1	Potential Corporate Privacy Violation	ET POLICY Http Client Body contains pwd= in cleartext
+38619	10	10	1	A Network Trojan was detected	INDICATOR-COMPROMISE binary download while text expected
+2013659	10	10	1	Potential Corporate Privacy Violation	ET POLICY Self Signed SSL Certificate (SomeOrganizationalUnit)
+16482	10	10	1	Attempted User Privilege Gain	BROWSER-IE Microsoft Internet Explorer userdata behavior memory corruption attempt
+2008585	10	10	1	Potential Corporate Privacy Violation	ET P2P BitTorrent DHT announce_peers request
+2021378	10	10	1	Potential Corporate Privacy Violation	ET POLICY External IP Lookup - checkip.dyndns.org
+32691	10	10	1	Attempted User Privilege Gain	BROWSER-IE Microsoft Internet Explorer NodeFilter use after free attempt
+2010937	10	10	2	Potentially Bad Traffic	ET POLICY Suspicious inbound to mySQL port 3306
+2014297	9	9	2	Potentially Bad Traffic	ET POLICY Vulnerable Java Version 1.7.x Detected
+2008066	11	9	1	A Network Trojan was detected	ET MALWARE Blank User-Agent (descriptor but no string)
+2008438	9	9	1	A Network Trojan was detected	ET MALWARE Possible Windows executable sent when remote host claims to send a Text File
+2016879	9	9	1	Potential Corporate Privacy Violation	ET POLICY Unsupported/Fake Windows NT Version 5.0
+2013535	14	9	2	Potentially Bad Traffic	ET INFO HTTP Request to a *.tc domain
+2003337	9	9	1	A Network Trojan was detected	ET MALWARE Suspicious User Agent (Autoupdate)
+2018959	9	9	1	Potential Corporate Privacy Violation	ET POLICY PE EXE or DLL Windows file download HTTP
+31299	8	8	1	A Network Trojan was detected	MALWARE-CNC Win.Trojan.Necurs or Win.Trojan.Locky variant outbound detection
+2021438	8	8	1	Potential Corporate Privacy Violation	ET POLICY External IP Lookup sina.com.cn
+2019126	8	8	1	Potential Corporate Privacy Violation	ET POLICY External IP Lookup
+2022826	8	8	1	A Network Trojan was detected	ET MALWARE W32/Toolbar.WIDGI User-Agent (WidgiToolbar-)
+2012170	9	8	1	Potential Corporate Privacy Violation	ET GAMES Blizzard Web Downloader Install Detected
+2012171	9	8	3	Misc activity	ET INFO DYNAMIC_DNS Query to 3322.org Domain
+2009475	8	8	1	Potential Corporate Privacy Violation	ET POLICY TeamViewer Dyngate User-Agent
+27525	7	7	1	Attempted User Privilege Gain	FILE-IMAGE Directshow GIF logical width overflow attempt
+2011708	8	7	1	Potential Corporate Privacy Violation	ET GAMES Blizzard Downloader Client User-Agent (Blizzard Downloader 2.x)
+2016847	7	7	2	Potentially Bad Traffic	ET INFO Possible Chrome Plugin install
+2013927	7	7	2	Potentially Bad Traffic	ET POLICY HTTP traffic on port 443 (HEAD)
+2009375	8	7	1	Potential Corporate Privacy Violation	ET CHAT General MSN Chat Activity
+2010067	10	7	1	A Network Trojan was detected	ET POLICY Data POST to an image file (jpg)
+27526	6	6	1	Attempted User Privilege Gain	FILE-IMAGE Directshow GIF logical height overflow attempt
+2400020	6	6	2	Misc Attack	ET DROP Spamhaus DROP Listed Traffic Inbound group 21
+36450	6	6	1	Attempted User Privilege Gain	BROWSER-IE Microsoft Internet Explorer RegExp object use-after-free attempt
+24397	7	6	1	Potential Corporate Privacy Violation	APP-DETECT Steam game URI handler
+6	6	6	1	Attempted User Privilege Gain	(ftp_telnet) FTP response message was too long
+2018170	6	6	1	Potential Corporate Privacy Violation	ET POLICY Application Crash Report Sent to Microsoft
+2016921	6	6	1	A Network Trojan was detected	ET INFO Suspicious Mozilla UA with no Space after colon
+26267	6	6	1	A Network Trojan was detected	MALWARE-CNC Win.Trojan.Zeus v3 DGA DNS query detected
+2522485	12	6	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node UDP Traffic group 243
+2014169	5	5	2	Potentially Bad Traffic	ET DNS Query for .su TLD (Soviet Union) Often Malware Related
+2000369	5	5	1	Potential Corporate Privacy Violation	ET P2P BitTorrent Announce
+2014519	5	5	3	Misc activity	ET INFO EXE - Served Inline HTTP
+2007799	4	4	1	Potential Corporate Privacy Violation	ET P2P Azureus P2P Client User-Agent
+2012887	4	4	1	Potential Corporate Privacy Violation	ET POLICY Http Client Body contains pass= in cleartext
+2002992	4	4	3	Misc activity	ET SCAN Rapid POP3 Connections - Possible Brute Force Attack
+2000418	4	4	1	Potential Corporate Privacy Violation	ET POLICY Executable and linking format (ELF) file download
+2007727	4	4	1	Potential Corporate Privacy Violation	ET P2P possible torrent download
+2011540	3	3	1	A Network Trojan was detected	ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O)
+2013784	4	3	3	Not Suspicious Traffic	ET POLICY Windows Mobile 7.0 User-Agent detected
+2002028	4	3	3	Misc activity	ET CHAT IRC PONG response
+2016778	3	3	2	Potentially Bad Traffic	ET DNS Query to a *.pw domain - Likely Hostile
+28039	3	3	1	A Network Trojan was detected	INDICATOR-COMPROMISE Suspicious .pw dns query
+26850	3	3	1	Potential Corporate Privacy Violation	BROWSER-IE Microsoft Internet Explorer IE5 compatibility mode enable attempt
+2007943	3	3	1	A Network Trojan was detected	ET MALWARE User-Agent (HTTP)
+2000427	3	3	1	Potential Corporate Privacy Violation	ET DELETED PE EXE Install Windows file download
+2015686	3	3	3	Misc activity	ET POLICY Signed TLS Certificate with md5WithRSAEncryption
+2002994	3	3	3	Misc activity	ET SCAN Rapid IMAP Connections - Possible Brute Force Attack
+2002024	3	3	3	Misc activity	ET CHAT IRC NICK command
+2014520	3	3	3	Misc activity	ET INFO EXE - Served Attached HTTP
+32295	3	3	1	A Network Trojan was detected	BLACKLIST User-Agent known malicious user-agent string http - Win.Trojan.Waski
+2008276	3	3	1	A Network Trojan was detected	ET TROJAN Suspicious User-Agent (contains loader)
+2022809	4	3	1	A Network Trojan was detected	ET MALWARE Taplika Browser Hijacker Checkin M1
+2012088	3	3	1	Executable code was detected	ET SHELLCODE Possible Call with No Offset TCP Shellcode
+2014756	3	3	1	Potential Corporate Privacy Violation	ET POLICY Logmein.com/Join.me SSL Remote Control Access
+2010517	2	2	1	Web Application Attack	ET WEB_SERVER Possible HTTP 404 XSS Attempt (Local Source)
+2022858	3	2	3	Misc activity	ET CURRENT_EVENTS Suspicious BITS EXE DL Dotted Quad as Observed in Recent Cerber Campaign
+2002192	7	2	1	Potential Corporate Privacy Violation	ET CHAT MSN status change
+2013097	2	2	2	Potentially Bad Traffic	ET INFO DYNAMIC_DNS HTTP Request to a *.dyndns.* domain
+2021173	2	2	1	A Network Trojan was detected	ET MALWARE PUP Win32/Conduit.SearchProtect.O CnC Beacon
+23299	2	2	1	Attempted User Privilege Gain	BROWSER-PLUGINS Microsoft Internet Explorer MSXML .definition ActiveX clsid access attempt
+23296	2	2	1	Attempted User Privilege Gain	BROWSER-PLUGINS Microsoft Internet Explorer MSXML .definition ActiveX clsid access attempt
+23291	2	2	1	Attempted User Privilege Gain	BROWSER-PLUGINS Microsoft Internet Explorer MSXML .definition ActiveX clsid access attempt
+23290	2	2	1	Attempted User Privilege Gain	BROWSER-PLUGINS Microsoft Internet Explorer MSXML .definition ActiveX clsid access attempt
+2014304	2	2	1	Potential Corporate Privacy Violation	ET POLICY External IP Lookup Attempt To Wipmania
+2016777	5	2	2	Potentially Bad Traffic	ET INFO HTTP Request to a *.pw domain
+2015707	2	2	3	Misc activity	ET INFO JAVA - document.createElement applet
+2017871	4	2	1	A Network Trojan was detected	ET POLICY W32/BitCoinMiner.MultiThreat Subscribe/Authorize Stratum Protocol Message
+2012849	2	2	2	Potentially Bad Traffic	ET POLICY Possible Mobile Malware POST of IMSI International Mobile Subscriber Identity in URI
+2012843	2	2	1	Potential Corporate Privacy Violation	ET POLICY Cleartext WordPress Login
+37214	2	2	1	A Network Trojan was detected	MALWARE-CNC Win.Trojan.Pmabot outbound connection attempt
+37212	2	2	1	A Network Trojan was detected	MALWARE-CNC Win.Trojan.Pmabot outbound connection attempt
+2011227	2	2	1	A Network Trojan was detected	ET POLICY User-Agent (NSIS_Inetc (Mozilla)) - Sometimes used by hostile installers
+2018216	4	2	2	Potentially Bad Traffic	ET INFO HTTP Connection To DDNS Domain Hopto.org
+32488	2	2	2	Potentially Bad Traffic	INDICATOR-COMPROMISE .com- potentially malicious hostname
+2017780	2	2	1	A Network Trojan was detected	ET CURRENT_EVENTS Possible Android InMobi SDK SideDoor Access postToSocial
+37215	2	2	1	A Network Trojan was detected	MALWARE-CNC Win.Trojan.Pmabot outbound connection attempt
+2016141	3	2	1	A Network Trojan was detected	ET INFO Executable Download from dotted-quad Host
+32981	2	2	1	A Network Trojan was detected	BLACKLIST DNS request for known malware domain aquametron.com - Win.Trojan.Graftor
+27997	3	2	3	Misc activity	APP-DETECT DNS request for Dynamic Internet Technology domain dongtaiwang.net
+2001682	2	2	1	Potential Corporate Privacy Violation	ET CHAT MSN IM Poll via HTTP
+2002023	2	2	3	Misc activity	ET CHAT IRC USER command
+26287	30	2	3	Misc activity	APP-DETECT Absolute Software Computrace outbound connection - search.namequery.com
+2021701	2	2	1	Potential Corporate Privacy Violation	ET GAMES MINECRAFT Server response inbound
+2016877	2	2	1	Potential Corporate Privacy Violation	ET POLICY Unsupported/Fake FireFox Version 2.
+2000357	2	2	1	Potential Corporate Privacy Violation	ET P2P BitTorrent Traffic
+7572	2	2	3	Misc activity	BLACKLIST User-Agent known malicious user agent - DigExt
+2402001	2	2	2	Misc Attack	ET DROP Dshield Block Listed Source group 1
+2001583	2	2	3	Misc activity	ET SCAN Behavioral Unusual Port 1433 traffic, Potential Scan or Infection
+2008583	2	2	1	Potential Corporate Privacy Violation	ET P2P BitTorrent DHT nodes reply
+2008210	2	2	1	A Network Trojan was detected	ET MALWARE Misspelled Mozilla User-Agent (Mozila)
+2017779	2	2	1	A Network Trojan was detected	ET CURRENT_EVENTS Possible Android InMobi SDK SideDoor Access makeCall
+2014170	2	2	1	A Network Trojan was detected	ET POLICY HTTP Request to .su TLD (Soviet Union) Often Malware Related
+2017782	3	2	1	A Network Trojan was detected	ET CURRENT_EVENTS Possible Android InMobi SDK SideDoor Access sendSMS
+2017781	2	2	1	A Network Trojan was detected	ET CURRENT_EVENTS Possible Android InMobi SDK SideDoor Access sendMail
+2016765	1	1	3	Misc activity	ET INFO PDF - Acrobat Enumeration - pdfobject.js
+2019240	1	1	1	Potential Corporate Privacy Violation	ET POLICY Executable and linking format (ELF) file download Over HTTP
+32851	286	1	3	Misc activity	APP-DETECT Absolute Software Computrace outbound connection - search64.namequery.com
+2012059	1	1	2	Potentially Bad Traffic	ET WEB_CLIENT Hex Obfuscation of document.write % Encoding
+2016360	1	1	3	Misc activity	ET INFO JAVA - ClassID
+23111	1	1	1	Web Application Attack	POLICY-OTHER PHP uri tag injection attempt
+2010726	1	1	1	Attempted User Privilege Gain	ET ACTIVEX Adobe browser document ActiveX DoS Attempt
+2016104	1	1	1	A Network Trojan was detected	ET TROJAN DNS Reply for unallocated address space - Potentially Malicious 1.1.1.0/24
+2012041	1	1	2	Potentially Bad Traffic	ET WEB_CLIENT Hex Obfuscation of String.fromCharCode % Encoding
+2017282	1	1	1	A Network Trojan was detected	ET INFO Microsoft Script Encoder Encoded File
+2403355	1	1	2	Misc Attack	ET CINS Active Threat Intelligence Poor Reputation IP UDP group 28
+2017873	7	1	1	A Network Trojan was detected	ET POLICY W32/BitCoinMiner.MultiThreat Stratum Protocol Mining.Notify Work Server Response
+2014819	1	1	3	Misc activity	ET INFO Packed Executable Download
+37736	1	1	1	Attempted User Privilege Gain	FILE-FLASH Adobe Flash Player Point object integer overflow attempt
+2008974	1	1	1	A Network Trojan was detected	ET MALWARE User-Agent (Mozilla/4.0 (compatible))
+2404589	1	1	1	A Network Trojan was detected	ET CNC Ransomware Tracker Reported CnC Server UDP group 95
+2010525	1	1	1	Web Application Attack	ET WEB_CLIENT Possible HTTP 500 XSS Attempt (External Source)
+25050	1	1	1	A Network Trojan was detected	MALWARE-CNC Win.Trojan.Zeus variant outbound connection
+2012886	1	1	1	Potential Corporate Privacy Violation	ET POLICY Http Client Body contains passwd= in cleartext
+2015708	1	1	2	Potentially Bad Traffic	ET CURRENT_EVENTS - Applet Tag In Edwards Packed JavaScript
+2404413	5	1	1	A Network Trojan was detected	ET CNC Ransomware Tracker Reported CnC Server UDP group 7
+2017364	1	1	2	Potentially Bad Traffic	ET INFO SUSPCIOUS Non-standard base64 charset used for encoding
+2522753	1	1	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node UDP Traffic group 377
+2007765	1	1	1	Potential Corporate Privacy Violation	ET POLICY Logmein.com Host List Download
+2500042	1	1	2	Misc Attack	ET COMPROMISED Known Compromised or Hostile Host Traffic TCP group 22
+2018919	1	1	1	Potential Corporate Privacy Violation	ET POLICY possible Xiaomi phone data leakage HTTP
+27988	1	1	3	Misc activity	APP-DETECT DNS request for Dynamic Internet Technology domain dongtaiwang.com
+2012266	1	1	2	Potentially Bad Traffic	ET WEB_CLIENT Hex Obfuscation of unescape % Encoding
+31976	1	1	1	Attempted Administrator Privilege Gain	OS-OTHER Bash CGI environment variable injection attempt
+2018455	1	1	1	A Network Trojan was detected	ET TROJAN DNS Reply Sinkhole - Anubis - 195.22.26.192/26
+2012398	1	1	2	Potentially Bad Traffic	ET WEB_CLIENT Hex Obfuscation of replace Javascript Function % Encoding
+2013457	1	1	1	A Network Trojan was detected	ET POLICY BitCoin User-Agent Likely Bitcoin Miner
+2001298	1	1	1	Potential Corporate Privacy Violation	ET P2P eDonkey Server Status Request
+2404451	2	1	1	A Network Trojan was detected	ET CNC Ransomware Tracker Reported CnC Server UDP group 26
+2522419	1	1	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node UDP Traffic group 210
+2010595	1	1	1	A Network Trojan was detected	ET MALWARE User-Agent (???)
+29090	1	1	2	Information Leak	INDICATOR-COMPROMISE suspicious test for public IP - iframe.ip138.com
+2022550	1	1	1	A Network Trojan was detected	ET CURRENT_EVENTS Possible Malicious Macro DL EXE Feb 2016
+2404002	1	1	1	A Network Trojan was detected	ET CNC Shadowserver Reported CnC Server TCP group 2
+2014734	1	1	1	Potential Corporate Privacy Violation	ET P2P BitTorrent - Torrent File Downloaded
+2522907	1	1	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node UDP Traffic group 454
+2014445	1	1	2	Potentially Bad Traffic	ET DELETED Possible Dynamic DNS Exploit Pack Payload
+2007660	1	1	1	A Network Trojan was detected	ET MALWARE Winxpperformance.com Related Spyware User-Agent (Microsoft Internet Browser)
+8068	1	1	1	Attempted User Privilege Gain	BROWSER-PLUGINS Microsoft Windows Scripting Host Shell ActiveX function call access
+2002025	1	1	3	Misc activity	ET CHAT IRC JOIN command
+2002027	2	1	3	Misc activity	ET CHAT IRC PING command
+2002026	1	1	3	Misc activity	ET CHAT IRC PRIVMSG command
+2000347	1	1	1	A Network Trojan was detected	ET TROJAN IRC Private message on non-standard port
+2006546	1	1	1	Attempted Administrator Privilege Gain	ET SCAN LibSSH Based Frequent SSH Connections Likely BruteForce Attack
+2003319	1	1	1	Potential Corporate Privacy Violation	ET P2P Edonkey Search Request (search by name)
+2523091	6	1	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node UDP Traffic group 546
+38247	1	1	1	Attempted Administrator Privilege Gain	SERVER-OTHER Flexera FlexNet Publisher stack buffer overflow attempt
+2003312	2	1	1	Potential Corporate Privacy Violation	ET P2P Edonkey Connect Request
+2001569	1	1	3	Misc activity	ET SCAN Behavioral Unusual Port 445 traffic, Potential Scan or Infection
+36771	1	1	1	Attempted User Privilege Gain	EXPLOIT-KIT Angler exploit kit viewforum uri request attempt
+2404591	2	1	1	A Network Trojan was detected	ET CNC Ransomware Tracker Reported CnC Server UDP group 96
+2012272	1	1	2	Potentially Bad Traffic	ET WEB_CLIENT Hex Obfuscation of eval % Encoding
+2405019	1	1	1	A Network Trojan was detected	ET CNC Shadowserver Reported CnC Server Port 6667 Group 4
+2013267	1	1	1	Executable code was detected	ET SHELLCODE Hex Obfuscated JavaScript Heap Spray 0a0a0a0a
+2000355	1	1	3	Misc activity	ET CHAT IRC authorization message
+2003579	1	1	1	A Network Trojan was detected	ET MALWARE Findwhat.com Spyware (clickthrough)
+2001330	1	1	3	Misc activity	ET POLICY RDP connection confirm
+2019822	1	1	1	A Network Trojan was detected	ET CURRENT_EVENTS WinHttpRequest Downloading EXE
+1	2	1	1	Attempted Administrator Privilege Gain	(spp_ssh) Challenge-Response Overflow exploit
+2010939	1	1	2	Potentially Bad Traffic	ET POLICY Suspicious inbound to PostgreSQL port 5432
+2016302	3	1	2	Information Leak	ET INFO UPnP Discovery Search Response vulnerable UPnP device 1
+2017777	1	1	1	A Network Trojan was detected	ET CURRENT_EVENTS Possible Android InMobi SDK SideDoor Access takeCameraPicture
+2020239	1	1	1	A Network Trojan was detected	ET MALWARE PUP.Win32.BoBrowser User-Agent (VersionDwl)
+2012269	1	1	2	Potentially Bad Traffic	ET WEB_CLIENT Hex Obfuscation of substr % Encoding
+2015743	1	1	1	Potential Corporate Privacy Violation	ET INFO Revoked Adobe Code Signing Certificate Seen
+2522275	1	1	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node UDP Traffic group 138
+2522486	1	1	2	Misc Attack	ET TOR Known Tor Relay/Router (Not Exit) Node TCP Traffic group 244
+38228	1	1	1	Attempted User Privilege Gain	EXPLOIT-KIT Angler EK landing page URI request attempt

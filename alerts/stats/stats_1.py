@@ -68,6 +68,7 @@ def table_sid_frequency(result, postfix):
 		writer = csv.writer(ff, delimiter='\t', quoting = csv.QUOTE_NONE)
 		writer.writerows(entries)	
 
+
 def stats_1(infiles, postfix):
 	result = []
 	for tmp_file in infiles:
@@ -76,30 +77,29 @@ def stats_1(infiles, postfix):
 			for line in reader:
 				result.append(line)
 
+	# filter out tcp/udp alerts
+	result = [line for line in result if line[0] == 'tcp' or line[0] == 'udp']
 	print "Number of alerts triggered: ", count_alerts(result)
-	print "Number of unique 5-tuples (micro flow_id, direction, sid): ", count_unique_5tuple_simple(result)
+	print "Number of unique 5-tuples (micro flow_id, direction, sid): ", count_unique_flows(result)
 	print "Number of distinct SIDs triggered: ", count_distinct_SIDs(result)	
 	table_sid_frequency(result, postfix)
 
 	tcp_result = [line for line in result if line[0] == 'tcp']
 	print "Number of TCP alerts triggered: ", count_alerts(tcp_result)
-        print "Number of unique 5-tuples (micro flow_id, direction, sid) triggering TCP alerts: ", count_unique_5tuple_simple(tcp_result)
+        print "Number of unique 5-tuples (micro flow_id, direction, sid) triggering TCP alerts: ", count_unique_flows(tcp_result)
         print "Number of distinct SIDs triggered in TCP alerts: ", count_distinct_SIDs(tcp_result)
 
 	udp_result = [line for line in result if line[0] == 'udp']
         print "Number of UDP alerts triggered: ", count_alerts(udp_result)
-        print "Number of unique 5-tuples (micro flow_id, direction, sid) triggering UDP alerts: ", count_unique_5tuple_simple(udp_result)
+        print "Number of unique 5-tuples (micro flow_id, direction, sid) triggering UDP alerts: ", count_unique_flows(udp_result)
         print "Number of distinct SIDs triggered in UDP alerts: ", count_distinct_SIDs(udp_result)
-
-	
-		
 
 
 def main():
-	log_dir = '/home/cchliu/data/log/wifi/0530'
+	log_dir = '/home/cchliu/data/log_security_ET/wifi/0530'
 
 	files_lst = glob.glob('{0}/*.csv'.format(log_dir))
-	stats_1(files_lst, '0530')
+	stats_1(files_lst, '0530_security_ET')
 
 if __name__ == "__main__":
 	main()
