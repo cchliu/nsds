@@ -31,8 +31,9 @@ def add_micro_flow_size(result):
 		tmp_string = tmp_proto + ' ' + src_ip + ' ' + dst_ip + ' ' + tmp_src_port + ' ' + tmp_dst_port + ' ' + micro_flow_id
 		if not tmp_string in mapping:
 			mapping[tmp_string] = 0
-		if 'tcp' in tmp_proto:
-			mapping[tmp_string] += 1
+		#if 'tcp' in tmp_proto:
+		#	mapping[tmp_string] += 1
+		mapping[tmp_string] += 1
 
 	# add micro_flow_size
 	new_result = []
@@ -96,6 +97,14 @@ def worker(sublist, out_q, thread_id):
 				curr_pos_in_flow = mapping[tmp_string]['curr_pos_in_flow']
 				micro_flow_id = mapping[tmp_string]['micro_flow_id']
 				direction = mapping[tmp_string]['direction']
+				### add pos_in_flow for udp flows
+				if tmp_proto == 'udp':
+					if curr_pos_in_flow < 0:
+						curr_pos_in_flow = 0
+					else:
+						curr_pos_in_flow += 1
+
+				### add pos_in_flow for tcp flows
 				if tcp_flags_syn == '1' and tcp_flags_ack == '0':
 					curr_pos_in_flow = 0
 					direction = 0
