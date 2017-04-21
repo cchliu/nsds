@@ -16,6 +16,8 @@ The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Det
 Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [here](https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1492750589&Signature=EnmI7%2B637FSX5r%2F%2FkZZm2ChzQrU%3D).
 
 The ruleset I am using:
+
+```
 Rule Stats...
 	New:-------1099
 	Deleted:---310
@@ -25,5 +27,12 @@ Rule Stats...
 	Total Rules:------32434
 IP Blacklist Stats...
 	Total IPs:-----23003
+```
+### Run traces against Snort
+Test the configuration file:
+```
+sudo snort -T -c /etc/snort/snort.conf
+```
 
+We just want to have alerts, trying to find a way to suppress packet logging.
 
