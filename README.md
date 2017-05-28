@@ -13,7 +13,7 @@ The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Det
 |06/04 |Wed   |1008        |938       |00:00:23    |18:32:44  |18.5         |
 
 ### Install Snort
-Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [here](https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1492750589&Signature=EnmI7%2B637FSX5r%2F%2FkZZm2ChzQrU%3D).
+Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [here](https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1495949885&Signature=6PzFHV84sME4eO%2BCEKyNiW4hHc4%3D).
 
 The ruleset I am using:
 
