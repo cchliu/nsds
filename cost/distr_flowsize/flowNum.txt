@@ -1,3 +1,0 @@
-Total # of flows:  11461650
-# of TCP flows:  5127081
-# of UDP flows:  6334569
