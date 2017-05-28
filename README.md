@@ -1,6 +1,6 @@
 # Network Security Analysis
 ### Traffic
-The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Details as shown in the table below:
+The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Each trace file is named as xx_num_YYYYmmddHHMMSS. Details as shown in the table below:
 
 
 | Date | Day  |No. of files| Size(GB) | Start Time | End Time | Duration(h) |
@@ -35,6 +35,7 @@ sudo snort -T -c /etc/snort/snort.conf
 ```
 
 We just want to have alerts, trying to find a way to suppress packet logging.
+### Feasibility study over the dataset
 
 
 ### Implementation -- reactive routing/mirroring
