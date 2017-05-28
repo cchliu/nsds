@@ -36,7 +36,8 @@ sudo snort -T -c /etc/snort/snort.conf
 
 We just want to have alerts, trying to find a way to suppress packet logging.
 ### Feasibility study over the dataset
-
+-N: stop packet logging
+edit snort.conf: output alert_unified:
 
 ### Implementation -- reactive routing/mirroring
 Step #1: create topology
