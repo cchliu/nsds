@@ -1,6 +1,6 @@
 # Network Security Analysis
 ### Traffic
-The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Each trace file is named as xx_num_YYYYmmddHHMMSS. Details as shown in the table below:
+The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Each trace file is named as xx_num_YYYYmmddHHMMSS. The trace is continuous over time and across days. Details as shown in the table below:
 
 
 | Date | Day  |No. of files| Size(GB) | Start Time | End Time | Duration(h) |
@@ -29,13 +29,28 @@ IP Blacklist Stats...
 	Total IPs:-----20829
 
 ```
-### Run traces against Snort
 Test the configuration file:
 ```
 sudo snort -T -c /etc/snort/snort.conf
 ```
-
-We just want to have alerts, trying to find a way to suppress packet logging.
+### Run traces against Snort
+We just want to store alerts (not pacekts). 
+```
+Edit snort.conf: 
+output alert_unified2: filename snort.alert, limit 128
+```
+Run Snort as
+```
+sudo snort -c /etc/snort/snort.conf -u chang -g chang -N -l /tmp --pcap-file=output.txt
+```
+We use the following options:
+```
+-u chang			Run snort as the following user after startup.
+-g chang			Run snort as the following group after startup.
+-N				Turn off packet logging. The program still generates alerts normally.
+-l /tmp				Set the output logging directory to /tmp
+-c /etc/snort/snort.conf	The path to snort.conf
+```
 ### Feasibility study over the dataset
 
 -N: stop packet logging
