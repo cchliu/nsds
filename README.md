@@ -50,6 +50,7 @@ We use the following options:
 -N				Turn off packet logging. The program still generates alerts normally.
 -l /tmp				Set the output logging directory to /tmp
 -c /etc/snort/snort.conf	The path to snort.conf
+--pcap-file=output.txt		File that contains a list of pcaps to read. Can specify path to pcap or directory to recurse to get pcaps.
 ```
 ### Feasibility study over the dataset
 
