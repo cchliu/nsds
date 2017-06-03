@@ -13,20 +13,21 @@ The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Eac
 |06/04 |Wed   |1008        |938       |00:00:23    |18:32:44  |18.5         |
 
 ### Install Snort
-Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [here](https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1495949885&Signature=6PzFHV84sME4eO%2BCEKyNiW4hHc4%3D).
+Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [here](https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1496476810&Signature=HrphMFJto%2F6LywcHW1C4ZqBSsY0%3D).
 
 The ruleset I am using:
 
-```
+```	
 Rule Stats...
-	New:-------1099
-	Deleted:---310
-	Enabled Rules:----10874
+	New:-------1074
+	Deleted:---285
+	Enabled Rules:----11035
 	Dropped Rules:----0
-	Disabled Rules:---21560
-	Total Rules:------32434
+	Disabled Rules:---21745
+	Total Rules:------32780
 IP Blacklist Stats...
-	Total IPs:-----23003
+	Total IPs:-----20829
+
 ```
 ### Run traces against Snort
 Test the configuration file:
