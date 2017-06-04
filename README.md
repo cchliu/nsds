@@ -52,6 +52,18 @@ We use the following options:
 -c /etc/snort/snort.conf	The path to snort.conf
 --pcap-file=output.txt		File that contains a list of pcaps to read. Can specify path to pcap or directory to recurse to get pcaps.
 ```
+
+Some parameters need to be tuned based on the [README.stream5](http://lpc1.clpccd.cc.ca.us/lpc/jgonder/studentresources/TNT%20v.%202.6/bin/cmdlinetools/snort/doc/README.stream5):
+```
+Global settings for the Stream5 preprocessor
+- memcap 	1073741824(maximum)
+
+TCP Configuration for stream5_tcp
+- max_queued_bytes	4194304(default * 4)
+- max_queued_segs	2621(default)
+```
+
+
 ### Feasibility study over the dataset
 
 -N: stop packet logging
