@@ -62,14 +62,12 @@ TCP Configuration for stream5_tcp
 - max_queued_bytes	4194304(default * 4)
 - max_queued_segs	2621(default)
 ```
-
+### Create ALERT Table
+We insert all "TCP" alerts into the ALERT table for later analysis. There are in total 22,465,730 alerts.
 
 ### Feasibility study over the dataset
+Next we scan through the pcap files to extract corresponding flow packets.
 
--N: stop packet logging
-edit snort.conf: output alert_unified:
-
-- checking if these pcap files are continuous
 
 ### Implementation -- reactive routing/mirroring
 Step #1: create topology
