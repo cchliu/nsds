@@ -3,7 +3,7 @@
 Alerts are from the snort.alert unified2 files.
 
 ::
-    usage:
+    usage: python barnyard.py
 """
 import sqlite3
 import logging
@@ -88,8 +88,10 @@ def read_alerts(conn, table_name):
 
     Divide the alert data into 1000 rows each and commit data in chunks.
     """
-    fileobj = open("Alert/snort.alert.1496476621", 'rb')
-    reader = unified2.RecordReader(fileobj)
+    #fileobj = open("Alert/snort.alert.1496476621", 'rb')
+    #reader = unified2.RecordReader(fileobj)
+
+    reader = unified2.SpoolRecordReader("Alert", "snort.alert")
 
     chunk = []
     for record in reader:
@@ -116,6 +118,10 @@ def main():
     create_table(conn, table_name)
 
     read_alerts(conn, table_name)
+
+    # Close the connection
+    conn.close()
+
 
 if __name__ == "__main__":
     main() 
