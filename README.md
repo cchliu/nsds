@@ -1,6 +1,6 @@
 # Network Security Analysis
 ### Traffic
-The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Each trace file is named as xx_num_YYYYmmddHHMMSS. Details as shown in the table below:
+The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Each trace file is named as xx_num_YYYYmmddHHMMSS. The trace is continuous over time and across days. Details as shown in the table below:
 
 
 | Date | Day  |No. of files| Size(GB) | Start Time | End Time | Duration(h) |
@@ -13,7 +13,7 @@ The traffic traces we have were collected between 05/30/2014 and 06/04/2014. Eac
 |06/04 |Wed   |1008        |938       |00:00:23    |18:32:44  |18.5         |
 
 ### Install Snort
-Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [here](https://s3.amazonaws.com/snort-org-site/production/document_files/files/000/000/122/original/Snort_2.9.9.x_on_Ubuntu_14-16.pdf?AWSAccessKeyId=AKIAIXACIED2SPMSC7GA&Expires=1496476810&Signature=HrphMFJto%2F6LywcHW1C4ZqBSsY0%3D).
+Snort is an open-source signature-based detection engine. There is a very good tutorial on installing Snort (2.9.9.x) on Ubuntu 14 and 16. The tutorial link is [Snort 2.9.9.x on Ubuntu 14 -16](https://snort.org/documents).
 
 The ruleset I am using:
 
@@ -29,13 +29,41 @@ IP Blacklist Stats...
 	Total IPs:-----20829
 
 ```
-### Run traces against Snort
 Test the configuration file:
 ```
 sudo snort -T -c /etc/snort/snort.conf
 ```
+### Run traces against Snort
+We just want to store alerts (not pacekts). 
+```
+Edit snort.conf: 
+output alert_unified2: filename snort.alert, limit 128
+```
+Run Snort as
+```
+sudo snort -c /etc/snort/snort.conf -u chang -g chang -N -l /tmp --pcap-file=output.txt
+```
+We use the following options:
+```
+-u chang			Run snort as the following user after startup.
+-g chang			Run snort as the following group after startup.
+-N				Turn off packet logging. The program still generates alerts normally.
+-l /tmp				Set the output logging directory to /tmp
+-c /etc/snort/snort.conf	The path to snort.conf
+--pcap-file=output.txt		File that contains a list of pcaps to read. Can specify path to pcap or directory to recurse to get pcaps.
+```
 
-We just want to have alerts, trying to find a way to suppress packet logging.
+Some parameters need to be tuned based on the [README.stream5](http://lpc1.clpccd.cc.ca.us/lpc/jgonder/studentresources/TNT%20v.%202.6/bin/cmdlinetools/snort/doc/README.stream5):
+```
+Global settings for the Stream5 preprocessor
+- memcap 	1073741824(maximum)
+
+TCP Configuration for stream5_tcp
+- max_queued_bytes	4194304(default * 4)
+- max_queued_segs	2621(default)
+```
+
+
 ### Feasibility study over the dataset
 
 -N: stop packet logging
