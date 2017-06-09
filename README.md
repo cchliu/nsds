@@ -67,7 +67,16 @@ We insert all "TCP" alerts into the ALERT table for later analysis. There are in
 
 ### Feasibility study over the dataset
 Next we scan through the pcap files to extract corresponding flow packets.
-
+- Convert pcap to csv
+  - Remove these fields because:
+```
+tshark: Some fields aren't valid:
+	dns.resp.primaryname
+	dns.resp.ns
+	dns.resp.addr
+```
+- For each csv file, scan through the whole file, record all unique 5-tuples; for each unique 5-tuple, check there is an alert matching with this 5-tuple.
+- How long will it take to process one query? How long will it take to process one file? And how long will it take to process all pcaps?
 
 ### Implementation -- reactive routing/mirroring
 Step #1: create topology
