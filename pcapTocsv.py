@@ -9,6 +9,7 @@ LOG = logging.getLogger(__name__)
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 # CSV column No. of relevant fields
+TIME_EPOCH = 2
 IP_SRC  = 5
 IP_DST  = 6
 UDP_SRCPORT = 7
@@ -82,10 +83,10 @@ def aggregate(csvfile):
                 # We will write down bi-directional traffic under one unidirectional 5-tuple,
                 # whichever direction that packet comes first. 
                 curr_tuple_incoming = (row_list[IP_SRC], row_list[IP_DST], row_list[TCP_SRCPORT], \
-                        row_list[TCP_DSTPORT], TCP_IP_PROTOCOL)
+                        row_list[TCP_DSTPORT], str(TCP_IP_PROTOCOL))
                 
                 curr_tuple_outgoing = (row_list[IP_DST], row_list[IP_SRC], row_list[TCP_DSTPORT], \
-                        row_list[TCP_SRCPORT], TCP_IP_PROTOCOL)
+                        row_list[TCP_SRCPORT], str(TCP_IP_PROTOCOL))
       
                 if curr_tuple_incoming in flows:
                     if not curr_tuple_outgoing in flows:
@@ -99,8 +100,8 @@ def aggregate(csvfile):
                 
     return flows
 
-def query_cmd(inputs):
-    """For eaach input 5-tuple, create the query command issued to the database
+def select_exist_cmd(inputs):
+    """For each input 5-tuple, create the query command issued to the database
     to check if there is a match with the 5-tuple.
 
     :params inputs: The input 5-tuple.
@@ -120,9 +121,82 @@ def query_cmd(inputs):
     table_name = "ALERT"
     _query = """SELECT EXISTS (SELECT 1 FROM %s WHERE %s LIMIT 1)""" % (table_name, _clause)
     return _query
+
+def select_exist_coarse(ip):
+    """Create the query command issued to the database to check if there is a match based
+    on the source_ip/destination_ip."""
+
+    table_name = "ALERT"
+
+    _query = """SELECT EXISTS (SELECT 1 FROM %s WHERE source_ip="%s" OR destination_ip="%s" LIMIT 1)""" \
+            % (table_name, ip, ip)
+    return _query
+
+def flow_match(conn, flow):
+    """Input a 5-tuple, search the ALERT table to find if
+    there is a match with the 5-tuple. 
+
+    :params flow: The input 5-tuple.
     
+    :returns: Boolean, True there is a match; False no match. 
+    """
+    c = conn.cursor()
+    # Since bi-directional traffic is logged under one unidirectional 5-tuple,
+    # we need to query 5-tuples of both direction see if there is a match.
+    flow_incoming = flow
+    flow_outgoing = (flow[1], flow[0], flow[3], flow[2], flow[4])
+
+    _query = select_exist_cmd(flow_incoming)
+    LOG.debug(_query)
+    c.execute(_query)
+    match_incoming = c.fetchone()[0]
+    if match_incoming:
+        return True 
+
+    _query = select_exist_cmd(flow_outgoing)
+    LOG.debug(_query)
+    c.execute(_query)
+    match_outgoing = c.fetchone()[0]
+    if match_outgoing:
+        return True
+    return False
+
 def flow_filter(conn, flows):
-    """For each input 5-tuple, search the ALERT table to find if 
+    """Apply a first-stage filter: aggregate 5-tuples under unique src_ips. Then
+    check if this src_ip ever exists in the ALERT table (either in src_ip position or in dst_ip position). 
+    If not, we save the trouble for querying the fine-grained 5-tuples in this bowl. 
+    If yes, for each 5-tuple aggregated under this src_ip, we query the ALERT table to check if there is a match.
+
+    Note because the traffic is bi-directional, the dst_ip is also src_ip in the other direction.
+    """
+    unique_src = {}
+    for flow in flows:
+        src_ip = flow[0]
+        if not src_ip in unique_src:
+            unique_src[src_ip] = [flow]
+        else:
+            unique_src[src_ip].append(flow)
+
+    LOG.debug("No. of unique src_ips: %d" % (len(unique_src),))
+
+    results = []
+    c = conn.cursor()
+    for src_ip in unique_src:
+        _query = select_exist_coarse(src_ip)
+        LOG.debug(_query)
+        c.execute(_query)
+        # If this ip exists in the ALERT table
+        if c.fetchone()[0]:    
+            for flow in unique_src[src_ip]:
+                # If this 5-tuple matches in the ALERT table
+                if flow_match(conn, flow):
+                    results += flows[flow]
+    return results
+
+def flow_filter_v1(conn, flows):
+    """Deprecated::too slow.
+    
+    For each input 5-tuple, search the ALERT table to find if 
     there is a match with the 5-tuple. Extracting the corresponding flow records 
     that trigger alerts.
 
@@ -134,7 +208,7 @@ def flow_filter(conn, flows):
     filtered_records = []
 
     for flow in flows:
-        """Since bidirectional traffic is logged under one unidirectional 5-tuple,
+        """Since bi-directional traffic is logged under one unidirectional 5-tuple,
         we need to query 5-tuples of both direction see if there is a match."""
         flow_incoming = flow
         flow_outgoing = (flow[1], flow[0], flow[3], flow[2], flow[4])
@@ -156,25 +230,44 @@ def flow_filter(conn, flows):
         
     return filtered_records
 
+def select_range_cmd(start_epoch, end_epoch):
+    """Select all alerts within the time interval of a pcap file.
+    
+    :params start_epoch/end_epoch: The time interval of the pcap file.
 
-            
+    :returns: The query statement.
+    """
+    table_name = "ALERT" 
+    _query = "SELECT event_second, event_microsecond, source_ip, destination_ip, \
+        sport_itype, dport_icode, protocol FROM %s WHERE event_second >= %d \
+        AND event_second <= %d" % (table_name, start_epoch, end_epoch)
+      
+def flow_filter_v2(conn, flows):
+    """Deprecated:: This is wrong because it misses packets of flows that are across
+    multiple pcap files.
+    
+    Select all alerts within the time interval of a pcap file. Aggregate the alerts 
+    by unique 5-tuples. Then for each 5-tuple in the aggregated alerts, check if there 
+    is a match in the flows.
+    
+    :params conn: The alert table connection.
+    :params flows: The flow dictionary built after scanning through the csv file.
 
+    :returns: A list of corresponding flow records.
+    """
+    # Find the start/end epoch of the pcap file.
+    start_epoch, end_epoch = 1497032677, 0
+    for flow in flows:
+        for row in flows[flow]:
+            row_list = row.split('\t')
+            curr_epoch = int(float(row_list[TIME_EPOCH]))
+            if curr_epoch < start_epoch:
+                start_epoch = curr_epoch
+            if curr_epoch > end_epoch:
+                end_epoch = curr_epoch
+    end_epoch += 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # Select all alerts within the time interval of a pcap file.
+    _query = select_range_cmd(start_epoch, end_epoch)
+    c = conn.cursor()
+    c.execute(_query)
