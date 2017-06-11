@@ -67,6 +67,7 @@ We insert all "TCP" alerts into the ALERT table for later analysis. There are in
 - Create an ALERT table with fields specified in the [unified2 IDS event](https://www.snort.org/faq/readme-unified2).
 - Decode alert event records stored in the unified2 format.
 - Load the event records into the database in chunks.
+- scripts: [barnyard.py](./barnyard.py), [unified2.py](./unified2.py)
 
 ### Feasibility study over the dataset
 Next we scan through the pcap files to extract corresponding flow packets.
