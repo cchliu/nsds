@@ -30,10 +30,12 @@ def pcapTocsv(filename, cmd):
     :returns: The path of the generated csv file.
 
     """
-    cmd[2] = filename
     csvFile = 'Traffic/{0}.csv'.format(os.path.basename(filename))
-    LOG.debug("Converting pcap file %s to csv..." % (filename))
-    with open(csvFile, 'wb') as ff:
-        call(cmd, stdout=ff)
-
+    if os.path.isfile(csvFile):
+        LOG.warn("This pcap file %s has been converted to csv" % (filename))
+    else:
+        LOG.debug("Converting pcap file %s to csv..." % (filename))
+        cmd[2] = filename
+        with open(csvFile, 'wb') as ff:
+            call(cmd, stdout=ff)
     return csvFile

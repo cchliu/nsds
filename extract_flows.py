@@ -30,6 +30,7 @@ def aggregate_per_file(csvfile, flows):
     
     """
     #flows = {}
+    LOG.debug("Aggregating traffic from file %s" % (csvfile))
     with open(csvfile, 'rb') as ff:
         for row in ff:
             row = row.rstrip('\n')
@@ -54,6 +55,7 @@ def aggregate_per_file(csvfile, flows):
                 else:
                     flows[curr_tuple_incoming] = [row]
 
+
 def aggregate_traffic(csvfiles):
     """Scan through a list of csvfiles and aggregate packets under the same 5-tuples.
 
@@ -64,8 +66,8 @@ def aggregate_traffic(csvfiles):
     flows = {}
     for csvfile in csvfiles:
         aggregate_per_file(csvfile, flows)
-
     return flows
+
 
 def aggregate_alerts():
     """ Read all alerts from the ALERT table and aggregate alerts under the same 5-tuples."""
@@ -115,7 +117,7 @@ def filter_flows(flows, aggregated_alerts):
         if outgoing_flow in flows:
             result += flows[outgoing_flow]
             continue
-    LOG.debug("No. of corresponding packets: %d" % (len(result)))
+    LOG.info("No. of corresponding packets: %d" % (len(result)))
     return result
 
     
