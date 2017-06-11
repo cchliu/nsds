@@ -64,7 +64,7 @@ TCP Configuration for stream5_tcp
 ```
 ### Create ALERT Table
 We insert all "TCP" alerts into the ALERT table for later analysis. There are in total 22,465,730 alerts.
-- Create an ALERT table with fields specified in the (unified2 IDS event)[https://www.snort.org/faq/readme-unified2].
+- Create an ALERT table with fields specified in the [unified2 IDS event](https://www.snort.org/faq/readme-unified2).
 - Decode alert event records stored in the unified2 format.
 - Load the event records into the database in chunks.
 
