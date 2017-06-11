@@ -71,7 +71,7 @@ We insert all "TCP" alerts into the ALERT table for later analysis. There are in
 
 ### Feasibility study over the dataset
 Next we scan through the pcap files to extract corresponding flow packets.
-- Convert pcap to csv
+- [pcap2csv.py](./pcap2csv.py): Convert pcap to csv
   - Remove these fields because:
 ```
 tshark: Some fields aren't valid:
@@ -79,10 +79,17 @@ tshark: Some fields aren't valid:
 	dns.resp.ns
 	dns.resp.addr
 ```
-- For each csv file, scan through the whole file, record all unique 5-tuples; for each unique 5-tuple, check there is an alert matching with this 5-tuple.
-- How long will it take to process one query? How long will it take to process one file? And how long will it take to process all pcaps?
+- [extract_flows.py](./extract_flows.py): Extract flow records that are corresponding to the alerts (Not only the packets that tirgger alerts, but also the packets of the same flow.)
+  - Aggregate alerts under uinque 5-tuples. We log bi-directional alerts under one uni-directional 5-tuple.
+  - Scan through a batch of csv files (by default batch number = 20), create a dictionary with key:unique 5-tuples and value:packet records. We log bi-directional traffic under one uni-directional 5-tuple. 
+  - Then for each unique 5-tuple among the alerts, we check if there is a match in the flows. Note here, we check both incoming direction and outgoing direction of each 5-tuple among alerts. 
+- [csv2sqlite.py](./csv2sqlite.py): Load filtered packet records into the TRACE table.
+- [petfinder.py](./petfinder.py): Main function to process the above 3-steps.
 
-- Load extracted packet records into a database.
+Deprecated: 
+- For each csv file, scan through the whole file, record all unique 5-tuples; for each unique 5-tuple, check there is an alert matching with this 5-tuple.
+  - This is too slow!
+
 
 ### Implementation -- reactive routing/mirroring
 Step #1: create topology
