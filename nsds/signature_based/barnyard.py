@@ -9,6 +9,7 @@ import sqlite3
 import logging
 import unified2
 import sys
+import time
 
 LOG = logging.getLogger(__name__)
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
@@ -117,7 +118,10 @@ def main():
     table_name = 'ALERT'
     create_table(conn, table_name)
 
+    start = time.time()
     read_alerts(conn, table_name)
+    end = time.time()
+    LOG.info("Time elapsed: %f" % (end-start))
 
     # Close the connection
     conn.close()
